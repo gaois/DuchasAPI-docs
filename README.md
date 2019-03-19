@@ -1,2 +1,235 @@
-# DuchasAPI-docs
-Developer documentation for the Dúchas Application Programming Interface
+# Dúchas Application Programming Interface (Version 0.5): Developer documentation
+
+**Note:** This documentation describes a **prerelease** version of the Dúchas API. Features are being added on an ongoing basis. URLs in this document refer to the `test.duchas.ie` test domain. These links and other aspects of the documentation will be revised in advance of the v1.0 release. 
+
+## Contents
+
+1. [Introduction](#introduction)
+2. [API overview](#api-overview)
+3. [API versioning](#api-versioning)
+4. [API authentication](#api-authentication)
+5. [API access permissions](#api-access-permissions)
+6. [Security](#security)
+7. [Resource paths](#resource-paths)
+8. [HTTP status codes](#http-status-codes)
+9. [Data retention and data protection](#data-retention-and-data-protection)
+
+## Introduction
+
+Dúchas is a project is to initiate the digitization of the [National Folklore Collection](https://www.ucd.ie/irishfolklore/en) (NFC), held at University College Dublin (UCD), Ireland. The results of the work to date have been made publicly available at [www.duchas.ie](https://www.duchas.ie) and are in the process of being archived for preservation by the [UCD Digital Library](https://digital.ucd.ie/). The technical solution is provided by [Fiontar & Scoil na Gaeilge](https://www.dcu.ie/fiontar_scoilnagaeilge/), Dublin City University (DCU). This documentation describes a web-based Application Programming Interface (API) that exposes the published content from the Collection to programmatic queries.
+
+### The National Folklore Collection and its collections
+
+Data from three of the five major collections of folklore held by Cnuasach Bhéaloideas Éireann/the National Folklore Collection are currently accessible via this platform. An understanding of the composition of these collections will aid your use of the API. Note that the databases associated with these collections are commonly referred to in shorthand form using acronyms such as CBÉS, CBÉG, etc. These acronyms are generally formed from the Irish-language name of the NFC: *Cnuasach Bhéaloideas Éireann* followed by a single letter that denotes the database in question. The database of the NFC's Main Manuscript Collection is simply referred to as CBÉ.
+
+#### The Main Manuscript Collection (CBÉ)
+
+The Main Manuscript Collection comprises 2,400 bound volumes of material collected since 1932. Full- and part-time collectors compiled the majority of these under the auspices of the Irish Folklore Commission (1935–1971). Approximately two thirds of the material is in Irish and it includes every aspect of the Irish oral tradition. This Collection is in the process of digitization with approximately 70 volumes published online to date. 
+
+#### The Schools' Collection (CBÉS)
+
+Approximately 740,000 pages (288,000 pages in the pupils’ original exercise books; 451,000 pages in bound volumes) of folklore and local tradition were compiled by pupils from 5,000 primary schools in the Irish Free State between 1937 and 1939. The scheme resulted in the creation of over half a million manuscript pages, generally referred to as ‘Bailiúchán na Scol’ or ‘The Schools’ Collection’. There are 1,128 volumes, numbered and bound, in the Collection, all of which have been digitised.
+
+#### The Photographic Collection (CBÉG)
+
+The National Folklore Collection’s photographic collection consists of some 80,000 photographs, the majority of which were taken by members of the Irish Folklore Commission (1935-70) and its successors, including staff of the NFC. The process of digitising and conserving the collection continues apace; some 10,000 images have been mde avalaible online for the first time.
+
+#### The Persons Database (CBÉD)
+
+Persons named within the CBÉ and CBÉG metadata are identified by reference to objects in this database. CBÉD does not map directly to any physical collection held by the NFC. Rather, given that many persons appear in several NFC collections - some photographers in CBÉG are also collectors in CBÉ, for example - the Persons Database is designed to serve as a single source of truth for personal metadata across the entire data set. At present, the Persons Database comprises all persons in the digitised portions of CBÉ and CBÉG. The sheer volume of people in the CBÉS database presents challenges when it comes to extracting a reliable set of personal metadata; however, it is planned to revisit this work in the future.
+
+Further information regarding the NFC and its collections is available [here](https://www.duchas.ie/en/info/cbe).
+
+## API overview
+
+The Dúchas API provides access to a number of resources by means of a defined URL schema. Specific resources are accessed via unique paths appended to the main website host. In some cases the resources that are returned may be filtered using optional query parameters. Attempts to access a resource provided by the API are referred to as requests. Following a successful request, resources are returned in the form of JSON. An unsuccessful attempt to access a resource will receive, at a minimum, a relevant HTTP status code in response to the request. An example of a valid request to the API is as follows:
+
+> `https://test.duchas.ie/api/v0.5/cbed/315678333`
+
+Users or applications (clients) requesting a resource via the API must authenticate their identity. This is achieved by providing an API key with each request. Each client must obtain a unique API key prior to interacting with the interface. Authentication is required to prevent abuse of the service and to track general usage statistics. Further details are provided below.
+
+## API versioning
+
+Multiple API versions are facilitated. This is to say, more than one version of the API may be accessible at the same time. Newer API versions may offer additional resources or functionalities but may require a different request syntax to older versions. The target API version is indicated by the second path parameter in the request URL:
+
+> /api/**v0.5**/authors
+
+Older versions will be supported for developer convenience: without versioning, frequent changes to API syntax may cause dependent client applications to malfunction. We will endeavour to add new resources incrementally and will implement breaking changes only as a last resort. The API is versioned using [Semantic Versioning 2.0.0](https://semver.org/spec/v2.0.0.html) (semver) and follows the semver specification. For brevity, however, only major and minor version points are reflected in request URLs.
+
+After a period of time it may become necessary to deprecate older API versions for maintenance or performance reasons. When you register for your API key, you will be asked if you are willing to receive communications from Fiontar & Scoil na Gaeilge from time to time. Agreeing to receive such communication means you will receive advance notice of any such changes.
+
+## API authentication
+
+Clients requesting a resource via the API are required to authenticate their identity. This is achieved by passing an API key to the service with each request. Authentication offers some protection to the service provider from abuse of the API involving request overloads. It also allows us to retain some usage statistics, with a view to performance monitoring and service enhancement. Learn more about the data we retain in the following sections.
+
+### How to obtain your API key
+
+Visit the Gaois Developer Hub at [gaois.ie](https://www.gaois.ie/). Log in or register to create an account and you will be able to access your unique API key.
+
+**Note:** This service not yet available and is scheduled for delivery in May 2019. In the meantime, please contact us at [eolas@duchas.ie](mailto:eolas@duchas.ie) to request or reset your API key.
+
+### How to pass your API key
+
+Your API key may be passed to the service in a few different ways. Choose whichever method is easiest for you.
+
+#### HTTP header
+
+Pass the API key into an `X-Api-Key` header:
+
+> `'X-Api-Key: <API_KEY_HERE>' 'https://test.duchas.ie/api/v0.5/cbed/1740563'`
+
+#### GET query parameter
+
+Pass the API key into an `apiKey` GET query string parameter:
+
+> `'https://test.duchas.ie/api/v0.5/cbed/1740563?apiKey=API_KEY_HERE'`
+
+Note: The GET query parameter may be used for non-GET requests (such as POST and PUT).
+
+#### HTTP Basic Authentication username
+
+As an alternative, pass the API key as the username (with an empty password) using HTTP basic authentication:
+
+> `'https://API_KEY_HERE@test.duchas.ie/api/v0.5/cbed/1740563'`
+
+## API access permissions
+
+The Dúchas API will cater to a number of different consumer types, including public users, archival users and internal systems. As a result of this, each API user and their associated API key is granted access permissions in accordance with our Terms of Service. Material that has been deemed sensitive by our editorial team is withheld from public API consumers, for example, as well as other metadata designed for internal use. If you have any questions regarding your current permissions level please [contact us](mailto:eolas@duchas.ie).
+
+## Security
+
+The API is served over a HTTPS protocol. Though HTTP requests to the service are automatically redirected to HTTPS, you should only ever interact with the API using HTTPS-prefixed URLs.
+
+While HTTPS offers a signficant level of security, we would stress that the basic authentication methods described above do not amount to end-to-end encryption. **You should only ever pass your API Key to the service**—never include sensitive data, particularly passwords, as part of your requests.
+
+## Resource paths
+
+The resources provided by the API are accessed via unique paths appended to the main website URL. All currently-available request paths are listed below.
+
+| Method      | Path                          | Collection     | Resource                  |
+| :---------- | :---------------------------- | :------------- | :------------------------ |
+| GET         | `/api`                        | N/A            | General API metadata      |
+| GET         | `/api/v0.5`                   | N/A            | General API metadata      |
+| GET         | `/api/v0.5/cbed`              | CBÉD           | List of persons and associated metadata |
+| GET         | `/api/v0.5/cbed/{id}`         | CBÉD           | Metadata associated with an individual person |
+| GET         | `/api/v0.5/cbed/occupations`  | CBÉD           | Reference list of metadata associated with occupations |
+| GET         | `/api/v0.5/cbeg`              | CBÉG           | List of photographs and associated metadata |
+| GET         | `/api/v0.5/cbeg/{id}`         | CBÉG           | Metadata associated with an individual photograph |
+| GET         | `/api/v0.5/cbeg/topics/handbook`   | CBÉG           | Reference list of subject headings (topics) in Seán Ó Súilleabháin's [*An Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg). |
+| GET         | `/api/v0.5/counties`          | All            | Reference list of metadata associated with Irish counties |
+| GET         | `/api/v0.5/countries`         | All            | Reference list of metadata associated with countries |
+
+- **Note:** Requests to the `/api/v0.5/cbeg` endpoint must be filtered by at least one of the following parameters: `LogainmID`, `GeoNameID`, `Country`, `PhotographerID`, or `PersonID`.
+
+### URL path parameters
+
+| Name          | Type          | Description    |
+| :------------ | :------------ | :------------- |
+| `id`          | integer       | Resource ID    |
+
+### URL query parameters
+
+Use these query parameters to filter the results returned by the API.
+
+#### The Photographic Collection (CBÉG)
+
+| Name          | Collection   | Type          | Description    |
+| :------------ | :----------- | :------------ | :------------- |
+| `Status`      | CBÉG         | integer       | Filter by editorial status (0-4) |
+| `Digitized`   | CBÉG         | boolean       | Filter by digitization status (0-4) |
+| `Copyright`   | CBÉG         | string        | Filter by copyright holder (e.g. CBE, UNK) |
+| `Condition`   | CBÉG         | integer       | Filter by physical condition (0-3) |
+| `HandbookTopic`   | CBÉG         | string        | Filter by [*A Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg) subject code (e.g. B005) |
+| `PhotographerID`   | CBÉG         | integer       | Filter by photographer's CBÉD ID |
+| `RelevantPersonID`   | CBÉG         | integer       | Filter by person's CBÉD ID |
+| `Country`     | CBÉG         | string        | Filter by country ISO code (e.g. DE, US, GB-ENG) |
+| `LogainmID`   | CBÉG         | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename ID  |
+| `GeoNameID`   | CBÉG         | integer       | Filter by [GeoName](https://www.geonames.org) placename ID  |
+| `DateFrom`    | CBÉG         | integer       | Retrieve records associated with this year* or later |
+| `DateTo`      | CBÉG         | integer       | Retrieve records associated with this year* or earlier |
+| `DateAccuracy`      | CBÉG         | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION) |
+| `CreatedBefore`    | CBÉG         | datetime     | Retrieve records created before a given date in `YYYY-MM-DD` format |
+| `CreatedSince`     | CBÉG         | datetime     | Retrieve records created after a given date in `YYYY-MM-DD` format |
+| `ModifiedBefore`    | CBÉG         | datetime     | Retrieve records last updated before a given date in `YYYY-MM-DD` format |
+| `ModifiedSince`     | CBÉG         | datetime     | Retrieve records last updated after a given date in `YYYY-MM-DD` format |
+
+- **Note:** The two-letter country codes accepted by the `Country` parameter conform to the [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html) standard. However, four additional ISO 3166-2 codes are accepted to facilitate differentiation between England, Northern Ireland, Scotland, and Wales. These are, respectively: `GB-ENG`, `GB-NIR`, `GB-SCT` and `GB-WLS`.
+- **Note:** The `DateFrom` and `DateTo` parameters currently only accept years in `YYYY` format. A future verison of the API will accept queries in `YYYY-MM-DD` format.
+
+#### The Persons Database (CBÉD)
+
+| Name          | Collection   | Type          | Description    |
+| :------------ | :----------- | :------------ | :------------- |
+| `Gender`      | CBÉD         | string        | Filter by person's gender (f, m)  |
+| `AinmID`      | CBÉD         | integer       | Filter by [ainm.ie](https://www.ainm.ie) entry ID  |
+| `ViafID`      | CBÉD         | integer       | Filter by [VIAF](https://viaf.org/) entryID  |
+| `Country`     | CBÉD         | string        | Filter by country ISO code (e.g. DE, US, GB-ENG) |
+| `LogainmID`   | CBÉD         | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename ID  |
+| `GeoNameID`   | CBÉD         | integer       | Filter by [GeoName](https://www.geonames.org) placename ID  |
+| `Occupation`  | CBÉD         | string        | Filter by occupation (e.g. IASC, FEIRM) |
+| `BirthDateFrom`    | CBÉD         | integer       | Retrieve records associated with this birth year* or later |
+| `BirthDateTo`      | CBÉD         | integer       | Retrieve records associated with this birth year* or earlier |
+| `BirthDateAccuracy`      | CBÉD         | string       | Filter by accuracy of birth date record (APPROX, INFER, QUESTION) |
+| `DeathDateFrom`    | CBÉD         | integer       | Retrieve records associated with this death year* or later |
+| `DeathDateTo`      | CBÉD         | integer       | Retrieve records associated with this death year* or earlier |
+| `DeathDateAccuracy`      | CBÉD         | string       | Filter by accuracy of death date record (APPROX, INFER, QUESTION) 
+| `CreatedBefore`    | CBÉD         | datetime     | Retrieve records created before a given date in `YYYY-MM-DD` format |
+| `CreatedSince`     | CBÉD         | datetime     | Retrieve records created after a given date in `YYYY-MM-DD` format |
+| `ModifiedBefore`    | CBÉD         | datetime     | Retrieve records last updated before a given date in `YYYY-MM-DD` format |
+| `ModifiedSince`     | CBÉD         | datetime     | Retrieve records last updated after a given date in `YYYY-MM-DD` format |
+
+- **Note:** The two-letter country codes accepted by the `Country` parameter conform to the [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html) standard. However, four additional ISO 3166-2 codes are accepted to facilitate differentiation between England, Northern Ireland, Scotland, and Wales. These are, respectively: `GB-ENG`, `GB-NIR`, `GB-SCT` and `GB-WLS`.
+- **Note:** The `DateFrom` and `DateTo` parameters currently only accept years in `YYYY` format. A future verison of the API will accept queries in `YYYY-MM-DD` format.
+
+
+### Illustrative examples
+
+Below is a non-exhaustive list of valid API request URLs, provided for demonstration purposes:
+
+- `https://test.duchas.ie/api/v0.5/cbed/315678333`
+- `https://test.duchas.ie/api/v0.5/cbed/1740563`
+- `https://test.duchas.ie/api/v0.5/cbed/?ModifiedSince=2019-01-01`
+- `https://test.duchas.ie/api/v0.5/cbed/?LogainmID=35176`
+- `https://test.duchas.ie/api/v0.5/cbed/?Gender=f&LogainmID=100013`
+- `https://test.duchas.ie/api/v0.5/cbed/?Country=US`
+- `https://test.duchas.ie/api/v0.5/cbed/?GeoNameID=5128581`
+- `https://test.duchas.ie/api/v0.5/cbed/?LogainmID=130443&Occupation=IASC`
+- `https://test.duchas.ie/api/v0.5/cbeg/974`
+- `https://test.duchas.ie/api/v0.5/cbeg/?LogainmID=100009&ModifiedSince=2018-09-01`
+- `https://test.duchas.ie/api/v0.5/cbeg/?Status=4&LogainmID=100023`
+- `https://test.duchas.ie/api/v0.5/cbeg/?Copyright=UNK&PhotographerID=93573082`
+- `https://test.duchas.ie/api/v0.5/cbeg/?HandbookTopic=E&PhotographerID=93573082&Digitized=false`
+- `https://test.duchas.ie/api/v0.5/cbeg/?HandbookTopic=B006&LogainmID=100023`
+- `https://test.duchas.ie/api/v0.5/cbeg/?LogainmID=100024&DateFrom=1960&DateTo=1969&DateAccuracy=APPROX`
+
+## HTTP status codes
+
+The status of all requests will be communicated, in the first instance, via standard HTTP status codes. We recommend that any applications interacting with the API handle the following status codes:
+
+| Code  | Definition            | Further information |
+| :---- | :-------------------- | :------------------ |
+| 200   | OK                    | A JSON object will be returned  |
+| 400   | BAD REQUEST           | The request syntax was invalid—a string describing the error may be returned |
+| 401   | UNAUTHORISED          | A valid API key was not provided |
+| 404   | NOT FOUND             | The resource does not exist |
+| 500   | INTERNAL SERVER ERROR | Please contact us at [eolas@duchas.ie](mailto:eolas@duchas.ie) quoting the request path |
+
+**Note:** The current API does not handle create-, update-, or delete-type requests. Therefore, only HTTP GET methods are facilitated at this time.
+
+## Data retention and data protection
+
+We store the following data every time a request is made to the API:
+
+1. Request path
+2. Response status code
+3. Result count
+4. Query response time
+5. Client ID (obtained with reference to the provided API key)
+
+The client ID links your request to the data you have stored in the gaois.ie Developer Hub (the data you provided when you signed up for the service, for example). You can view all of the above data at any time in the Gaois.ie Developer Hub. These data are stored by Fiontar & Scoil na Gaeilge in a GDPR-compliant manner.
+
+We reserve the right to report and/or publish aggregated or anonymised API query metrics. We will not report, publish or share any specific client data (i.e. your client ID or any associated client identification data) with any third party. We reserve the right to retain data items 1–4, listed above, indefinitely for the purposes of performance monitoring, research and service enhancement.
+
+You are entitled to have your personal data removed from our systems at any time. This means deleting your username, password, name, organisational affiliation, and association with stored requests, completely and permanently. Please contact us at [eolas@duchas.ie](mailto:eolas@duchas.ie) if you wish to request that your personal data be removed.
+
+By accessing the API you agree to abide by all policies and practices outlined in this document.
