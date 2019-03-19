@@ -16,7 +16,7 @@
 
 ## Introduction
 
-Dúchas is a project is to initiate the digitization of the [National Folklore Collection](https://www.ucd.ie/irishfolklore/en) (NFC), held at University College Dublin (UCD), Ireland. The results of the work to date have been made publicly available at [www.duchas.ie](https://www.duchas.ie) and are in the process of being archived for preservation by the [UCD Digital Library](https://digital.ucd.ie/). The technical solution is provided by [Fiontar & Scoil na Gaeilge](https://www.dcu.ie/fiontar_scoilnagaeilge/), Dublin City University (DCU). This documentation describes a web-based Application Programming Interface (API) that exposes the published content from the Collection to programmatic queries.
+Dúchas is a project is to initiate the digitization of the [National Folklore Collection](https://www.ucd.ie/irishfolklore/en) (NFC), held at University College Dublin (UCD), Ireland. The results of the work to date have been made publicly available at [www.duchas.ie](https://www.duchas.ie) and are in the process of being archived for preservation by the [UCD Digital Library](https://digital.ucd.ie/). The technical solution is provided by [Fiontar & Scoil na Gaeilge](https://www.dcu.ie/fiontar_scoilnagaeilge/), Dublin City University (DCU). This documentation describes a web-based Application Programming Interface (API) that exposes the published content from the Collection to programmatic queries. A [data dictionary](https://github.com/gaois/DuchasAPI-docs/blob/master/DATADICT.md) is available to assist users in parsing results returned by the API.
 
 ### The National Folklore Collection and its collections
 
@@ -104,7 +104,7 @@ While HTTPS offers a signficant level of security, we would stress that the basi
 
 ## Resource paths
 
-The resources provided by the API are accessed via unique paths appended to the main website URL. All currently-available request paths are listed below.
+The resources provided by the API are accessed via unique paths appended to the main website URL. All currently-available request paths are listed below. A [data dictionary](https://github.com/gaois/DuchasAPI-docs/blob/master/DATADICT.md) is available to assist users in parsing results returned by the API.
 
 | Method      | Path                          | Collection     | Resource                  |
 | :---------- | :---------------------------- | :------------- | :------------------------ |
