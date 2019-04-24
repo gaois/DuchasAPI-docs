@@ -216,6 +216,13 @@ Queries to the Persons Database may return one or more `person` objects. The inf
 
 A number of data entities or value objects are common to multiple collections. These are described below.
 
+### `coordinates`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| Latitude        | double              | one                 | The latitudinal coordinate |
+| Longitude       | double              | one                 | The longitudinal coordinate |
+
 ### `county`
 
 | Property name   | Type                | Cardinality         | Description               |
@@ -225,6 +232,7 @@ A number of data entities or value objects are common to multiple collections. T
 | NameGA          | string              | one                 | The county name (in Irish) |
 | QualifiedNameEN | string              | one                 | The county name including county (Co.) qualifier (in English) |
 | QualifiedNameGA | string              | one                 | The county name including county (Co.) qualifier (in Irish) |
+| Coordinates     | [`coordinates`](#coordinates) | one                 | The location's geographical coordinates |
 
 ### `country`
 
@@ -234,6 +242,7 @@ A number of data entities or value objects are common to multiple collections. T
 | GeoNameID       | integer             | one                 | The country's unique identifier in the [geonames.org](http://www.geonames.org) database |
 | NameEN          | string              | one                 | The country name (in English) |
 | NameGA          | string              | one                 | The country name (in Irish) |
+| Coordinates     | [`coordinates`](#coordinates) | one                 | The location's geographical coordinates |
 
 **Note:** Country codes in the `IsoCode` property adhere to the ISO 3166-1 standard except for England (`GB-ENG`), Northern Ireland (`GB-NIR`), Scotland (`GB-SCT`) and Wales (`GB-WLS`) where ISO 3166-2 codes are used. For these countries it was necessary to have greater resolution than the ISO 3166-1 standard provides.
 
@@ -273,6 +282,7 @@ This property indicates the accuracy of the date information using standard [MOD
 | GeoNameID       | integer             | one                 | The location's unique identifier in the [geonames.org](http://www.geonames.org) database |
 | NameEN          | string              | one                 | The location name (in English) |
 | NameGA          | string              | one                 | The location name (in Irish) |
+| Coordinates     | [`coordinates`](#coordinates) | one                 | The location's geographical coordinates |
 | Country         | [`country`](#country) | one                 | The country in which the location is situated |
 
 ### `locationIreland`
@@ -282,4 +292,5 @@ This property indicates the accuracy of the date information using standard [MOD
 | LogainmID       | integer             | one                 | The location's unique identifier in the [logainm.ie](https://www.logainm.ie) database |
 | NameEN          | string              | one                 | The location name (in English) |
 | NameGA          | string              | one                 | The location name (in Irish) |
+| Coordinates     | [`coordinates`](#coordinates) | one                 | The location's geographical coordinates |
 | Counties        | [`county`](#county) | one or many         | The county or counties in which the location is situated |
