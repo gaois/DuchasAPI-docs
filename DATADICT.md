@@ -221,7 +221,6 @@ A number of data entities or value objects are common to multiple collections. T
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | LogainmID       | integer             | one                 | The county's unique identifier in the [logainm.ie](https://www.logainm.ie) database |
-| Abbreviation    | string              | one                 | Abbreviation of the county name (based on Irish-language name) |
 | NameEN          | string              | one                 | The county name (in English) |
 | NameGA          | string              | one                 | The county name (in Irish) |
 | QualifiedNameEN | string              | one                 | The county name including county (Co.) qualifier (in English) |
