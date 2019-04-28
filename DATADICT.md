@@ -6,6 +6,11 @@ This document describes the data structure of the collections made available via
 
 ## Contents
 
+- [The Photographic Collection](#the-main-manuscript-collection-cbé)
+  - [`volume`](#volume)
+  - [`page`](#page)
+  - [`part`](#part)
+  - [`item`](#item)
 - [The Photographic Collection](#the-photographic-collection-cbég)
   - [`photograph`](#photograph)
   - [`handbookTopic`](#handbookTopic)
