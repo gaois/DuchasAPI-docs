@@ -54,14 +54,6 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | ListingOrder    | string              | one                 |  |
 | ImageFileName   | string              | one                 |  |
 | Sensitive       | boolean             | one                 | If true the page contains sensitive content and should not be made publicly available |
-| Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties in which the photograph was captured |
-| LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the photograph |
-| Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the photograph |
-| LocationsAbroad | [`locationAbroad`](#locationAbroad) | none or one or many | Denotes a location or locations outside of Ireland associated with the photograph |
-| Collectors      | [`person`](#person) | none or one or many |  |
-| Informants      | [`person`](#person) | none or one or many |  |
-| RelevantPersons | [`person`](#person) | none or one or many |  |
-| Items           | [`item`](#item)     | none or one or many |  |
 
 ### `part`
 
@@ -72,6 +64,14 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
 | TitlePages      | integer             | none or one or more |  |
 | Date            | [`date`](#date)     | none or one         |  |
+| Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties in which the photograph was captured |
+| LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the photograph |
+| Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the photograph |
+| LocationsAbroad | [`locationAbroad`](#locationAbroad) | none or one or many | Denotes a location or locations outside of Ireland associated with the photograph |
+| Collectors      | [`person`](#person) | none or one or many |  |
+| Informants      | [`person`](#person) | none or one or many |  |
+| RelevantPersons | [`person`](#person) | none or one or many |  |
+| Items           | [`item`](#item)     | none or one or many |  |
 
 ### `item`
 
