@@ -6,7 +6,7 @@ This document describes the data structure of the collections made available via
 
 ## Contents
 
-- [The Photographic Collection](#the-main-manuscript-collection-cbé)
+- [The Main Manuscript Collection](#the-main-manuscript-collection-cbé)
   - [`volume`](#volume)
   - [`page`](#page)
   - [`part`](#part)
