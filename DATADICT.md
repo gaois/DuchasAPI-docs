@@ -35,15 +35,20 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | ID              | integer             | one                 | The volume identifier (unique within collection) |
 | DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation  |
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
-| VolumeNumber    | string              | none or one         | The volume number     |
+| VolumeNumber    | string              | none or one         | The volume number         |
+| Status          | integer             | one                 | Specifies the entry's editorial [status](#status)  |
+| Pages           | [`page`](#page)     | one                 |  |
+| Parts           | [`part`](#part)     | none or one         |  |
 
 ### `page`
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | ID              | integer             | one                 | The page identifier (unique within collection) |
-| DateCreated     | ISO 8601 datetime   | one                 | The date and time of entry creation  |
-| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
+| PageNumber      | string              | one                 | The page number     |
+| ListingOrder    | string              | one                 |  |
+| ImageFileName   | string              | one                 |  |
+| Sensitive       | boolean             | one                 | If true the page contains sensitive content and should not be made publicly available |
 
 ### `part`
 
