@@ -23,6 +23,43 @@ This document describes the data structure of the collections made available via
   - [`date`](#date)
   - [`locationAbroad`](#locationAbroad)
   - [`locationIreland`](#locationIreland)
+  
+## The Main Manuscript Collection (CBÉ)
+
+Queries to the Main Manuscript Collection may return one or more `volume` objects. The information below describes the properties of this object type.
+
+### `volume`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The volume identifier (unique within collection) |
+| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
+| VolumeNumber    | string              | none or one         | The volume number     |
+
+### `page`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The page identifier (unique within collection) |
+| DateCreated     | ISO 8601 datetime   | one                 | The date and time of entry creation  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
+
+### `part`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The part identifier (unique within collection) |
+| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
+
+### `item`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The item identifier (unique within collection) |
+| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
 
 ## The Photographic Collection (CBÉG)
 
