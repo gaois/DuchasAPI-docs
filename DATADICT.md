@@ -40,7 +40,7 @@ A `part` entity represents a distinct section within a manuscript volume and may
 
 Queries to the Main Manuscript Collection may return one or more `volume` objects. The information below describes the properties of this object type.
 
-### `volume`
+### Main Manuscript `volume`
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
@@ -52,7 +52,7 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | Pages           | [`page`](#page)     | one                 | Metadata describing the volume's physical pages |
 | Parts           | [`part`](#part)     | none or one         | Metadata describing the logical parts which subdivide the manuscript volume and their contents |
 
-### `page`
+### Main Manuscript `page`
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
@@ -62,7 +62,7 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | ImageFileName   | string              | one                 | The file name that identifies the scanned image of the page |
 | Sensitive       | boolean             | one                 | If true the page contains sensitive content and should not be made publicly available |
 
-### `part`
+### Main Manuscript `part`
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
@@ -80,7 +80,7 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | RelevantPersons | [`person`](#person) | none or one or many |  |
 | Items           | [`item`](#item)     | none or one or many |  |
 
-### `item`
+### Main Manuscript `item`
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
