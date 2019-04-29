@@ -71,14 +71,14 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
 | TitlePages      | integer             | none or one or more | Denotes title pages associated with the manuscript part. Title pages may contain a general title, information about collectors or other introductory remarks. |
 | Date            | [`date`](#date)     | none or one         | Metadata associated with the date or period of time, if known, during which the manuscript part was compiled |
-| Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties in which the photograph was captured |
-| LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the photograph |
-| Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the photograph |
-| LocationsAbroad | [`locationAbroad`](#locationAbroad) | none or one or many | Denotes a location or locations outside of Ireland associated with the photograph |
-| Collectors      | [`person`](#person) | none or one or many |  |
-| Informants      | [`person`](#person) | none or one or many |  |
-| RelevantPersons | [`person`](#person) | none or one or many |  |
-| Items           | [`item`](#item)     | none or one or many |  |
+| Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties associated with the manuscript part |
+| LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the manuscript part |
+| Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the manuscript part |
+| LocationsAbroad | [`locationAbroad`](#locationAbroad) | none or one or many | Denotes a location or locations outside of Ireland associated with the manuscript part |
+| Collectors      | [`person`](#person) | none or one or many | Denotes persons involved in collecting the material within the manuscript part |
+| Informants      | [`person`](#person) | none or one or many | Denotes persons from whom material was obtained in the course of compiling the manuscript part |
+| RelevantPersons | [`person`](#person) | none or one or many | Denotes persons referenced within, or otherwise associated with, the manuscript part  |
+| Items           | [`item`](#item)     | none or one or many | Metadata describing the discrete items which compose the manuscript part |
 
 ### Main Manuscript `item`
 
