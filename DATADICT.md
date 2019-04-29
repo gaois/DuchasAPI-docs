@@ -43,10 +43,10 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | ID              | integer             | one                 | The volume identifier (unique within collection) |
 | DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation  |
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
-| VolumeNumber    | string              | none or one         | The volume number         |
+| VolumeNumber    | string              | none or one         | The volume's NFC archival reference number |
 | Status          | integer             | one                 | Specifies the entry's editorial [status](#status)  |
-| Pages           | [`page`](#page)     | one                 |  |
-| Parts           | [`part`](#part)     | none or one         |  |
+| Pages           | [`page`](#page)     | one                 | Metadata describing the volume's physical pages |
+| Parts           | [`part`](#part)     | none or one         | Metadata describing the logical parts which subdivide the manuscript volume and their contents |
 
 ### `page`
 
