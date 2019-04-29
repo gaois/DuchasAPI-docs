@@ -110,18 +110,19 @@ The resources provided by the API are accessed via unique paths appended to the 
 | :---------- | :---------------------------- | :------------- | :------------------------ |
 | GET         | `/api`                        | N/A            | General API metadata      |
 | GET         | `/api/v0.5`                   | N/A            | General API metadata      |
-| GET         | `/api/v0.5/cbe`               | CBÉ            | List of manuscript volumes and associated metadata |
+| GET         | `/api/v0.5/cbe`               | CBÉ            | List of manuscript volumes and associated metadata* |
 | GET         | `/api/v0.5/cbed`              | CBÉD           | List of persons and associated metadata |
 | GET         | `/api/v0.5/cbed/{id}`         | CBÉD           | Metadata associated with an individual person |
 | GET         | `/api/v0.5/cbed/occupations`  | CBÉD           | Reference list of metadata associated with occupations |
-| GET         | `/api/v0.5/cbeg`              | CBÉG           | List of photographs and associated metadata |
+| GET         | `/api/v0.5/cbeg`              | CBÉG           | List of photographs and associated metadata** |
 | GET         | `/api/v0.5/cbeg/{id}`         | CBÉG           | Metadata associated with an individual photograph |
 | GET         | `/api/v0.5/cbeg/topics/handbook`   | CBÉG           | Reference list of subject headings (topics) in Seán Ó Súilleabháin's [*An Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg). |
 | GET         | `/api/v0.5/counties`          | N/A            | Reference list of metadata associated with Irish counties |
 | GET         | `/api/v0.5/countries`         | N/A            | Reference list of metadata associated with countries |
 
-- **Note:** Requests to the `/api/v0.5/cbe` endpoint must be filtered by at least one of the following parameters: `VolumeID`, `PageID`, `PartID`, `ItemID`,`LogainmID`, `GeoNameID`, `Country`, `CollectorID`, `InformantID`, or `PersonID`.
-- **Note:** Requests to the `/api/v0.5/cbeg` endpoint must be filtered by at least one of the following parameters: `LogainmID`, `GeoNameID`, `Country`, `PhotographerID`, or `PersonID`.
+**\*Note:** Requests to the `/api/v0.5/cbe` endpoint must be filtered by at least one of the following parameters: `VolumeID`, `PageID`, `PartID`, `ItemID`,`LogainmID`, `GeoNameID`, `Country`, `CollectorID`, `InformantID`, or `PersonID`.
+
+**\*\*Note:** Requests to the `/api/v0.5/cbeg` endpoint must be filtered by at least one of the following parameters: `LogainmID`, `GeoNameID`, `Country`, `PhotographerID`, or `PersonID`.
 
 ### URL path parameters
 
@@ -144,19 +145,20 @@ Use these query parameters to filter the results returned by the API.
 | `HandbookTopic`   | CBÉG         | string        | Filter by [*A Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg) subject code (e.g. B005) |
 | `PhotographerID`   | CBÉG         | integer       | Filter by photographer's CBÉD ID |
 | `RelevantPersonID`   | CBÉG         | integer       | Filter by person's CBÉD ID |
-| `Country`     | CBÉG         | string        | Filter by country ISO code (e.g. DE, US, GB-ENG) |
+| `Country`     | CBÉG         | string*       | Filter by country ISO code (e.g. DE, US, GB-ENG) |
 | `LogainmID`   | CBÉG         | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename ID  |
 | `GeoNameID`   | CBÉG         | integer       | Filter by [GeoName](https://www.geonames.org) placename ID  |
-| `DateFrom`    | CBÉG         | integer       | Retrieve records associated with this year* or later |
-| `DateTo`      | CBÉG         | integer       | Retrieve records associated with this year* or earlier |
+| `DateFrom`    | CBÉG         | integer**     | Retrieve records associated with this year* or later |
+| `DateTo`      | CBÉG         | integer**     | Retrieve records associated with this year* or earlier |
 | `DateAccuracy`      | CBÉG         | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION) |
 | `CreatedBefore`    | CBÉD         | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format |
 | `CreatedSince`     | CBÉD         | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format |
 | `ModifiedBefore`    | CBÉD         | ISO 8601 datetime | Retrieve records last updated before a given date in `YYYY-MM-DD` format |
 | `ModifiedSince`     | CBÉD         | ISO 8601 datetime | Retrieve records last updated after a given date in `YYYY-MM-DD` format |
 
-- **Note:** The two-letter country codes accepted by the `Country` parameter conform to the [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html) standard. However, four additional ISO 3166-2 codes are accepted to facilitate differentiation between England, Northern Ireland, Scotland, and Wales. These are, respectively: `GB-ENG`, `GB-NIR`, `GB-SCT` and `GB-WLS`.
-- **Note:** The `DateFrom` and `DateTo` parameters currently only accept years in `YYYY` format. A future verison of the API will accept queries in `YYYY-MM-DD` format.
+**\*Note:** The two-letter country codes accepted by the `Country` parameter conform to the [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html) standard. However, four additional ISO 3166-2 codes are accepted to facilitate differentiation between England, Northern Ireland, Scotland, and Wales. These are, respectively: `GB-ENG`, `GB-NIR`, `GB-SCT` and `GB-WLS`.
+
+**\*\*Note:** The `DateFrom` and `DateTo` parameters currently only accept years in `YYYY` format.
 
 #### The Persons Database (CBÉD)
 
@@ -165,24 +167,24 @@ Use these query parameters to filter the results returned by the API.
 | `Gender`      | CBÉD         | string        | Filter by person's gender (f, m)  |
 | `AinmID`      | CBÉD         | integer       | Filter by [ainm.ie](https://www.ainm.ie) entry ID  |
 | `ViafID`      | CBÉD         | integer       | Filter by [VIAF](https://viaf.org/) entryID  |
-| `Country`     | CBÉD         | string        | Filter by country ISO code (e.g. DE, US, GB-ENG) |
+| `Country`     | CBÉD         | string*        | Filter by country ISO code (e.g. DE, US, GB-ENG) |
 | `LogainmID`   | CBÉD         | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename ID  |
 | `GeoNameID`   | CBÉD         | integer       | Filter by [GeoName](https://www.geonames.org) placename ID  |
 | `Occupation`  | CBÉD         | string        | Filter by occupation (e.g. IASC, FEIRM) |
-| `BirthDateFrom`    | CBÉD         | integer       | Retrieve records associated with this birth year* or later |
-| `BirthDateTo`      | CBÉD         | integer       | Retrieve records associated with this birth year* or earlier |
+| `BirthDateFrom`    | CBÉD         | integer**     | Retrieve records associated with this birth year* or later |
+| `BirthDateTo`      | CBÉD         | integer**     | Retrieve records associated with this birth year* or earlier |
 | `BirthDateAccuracy`      | CBÉD         | string       | Filter by accuracy of birth date record (APPROX, INFER, QUESTION) |
-| `DeathDateFrom`    | CBÉD         | integer       | Retrieve records associated with this death year* or later |
-| `DeathDateTo`      | CBÉD         | integer       | Retrieve records associated with this death year* or earlier |
+| `DeathDateFrom`    | CBÉD         | integer**     | Retrieve records associated with this death year* or later |
+| `DeathDateTo`      | CBÉD         | integer**     | Retrieve records associated with this death year* or earlier |
 | `DeathDateAccuracy`      | CBÉD         | string       | Filter by accuracy of death date record (APPROX, INFER, QUESTION) 
 | `CreatedBefore`    | CBÉD         | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format |
 | `CreatedSince`     | CBÉD         | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format |
 | `ModifiedBefore`    | CBÉD         | ISO 8601 datetime | Retrieve records last updated before a given date in `YYYY-MM-DD` format |
 | `ModifiedSince`     | CBÉD         | ISO 8601 datetime | Retrieve records last updated after a given date in `YYYY-MM-DD` format |
 
-- **Note:** The two-letter country codes accepted by the `Country` parameter conform to the [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html) standard. However, four additional ISO 3166-2 codes are accepted to facilitate differentiation between England, Northern Ireland, Scotland, and Wales. These are, respectively: `GB-ENG`, `GB-NIR`, `GB-SCT` and `GB-WLS`.
-- **Note:** The `DateFrom` and `DateTo` parameters currently only accept years in `YYYY` format. A future verison of the API will accept queries in `YYYY-MM-DD` format.
+**\*Note:** The two-letter country codes accepted by the `Country` parameter conform to the [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html) standard. However, four additional ISO 3166-2 codes are accepted to facilitate differentiation between England, Northern Ireland, Scotland, and Wales. These are, respectively: `GB-ENG`, `GB-NIR`, `GB-SCT` and `GB-WLS`.
 
+**\*\*Note:** The `DateFrom` and `DateTo` parameters currently only accept years in `YYYY` format.
 
 ### Illustrative examples
 
