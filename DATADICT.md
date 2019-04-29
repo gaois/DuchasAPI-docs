@@ -209,7 +209,7 @@ This section describes values particular to properties of the `photograph` objec
 
 #### `archivedDescriptionStatus`
 
-Specifies the publication status of the `ArchivedDescription` field.
+Specifies the publication status of the `archivedDescription` field.
 
 | Value           | Description               |
 | :-------------- | :------------------------ |
