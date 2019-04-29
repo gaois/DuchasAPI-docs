@@ -93,6 +93,13 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | EditorsPick     | ISO 8601 datetime   | none or one         | Denotes the date on which the item was featured as an [editors' pick](https://www.duchas.ie/en/ftr/) on the dúchas.ie website, if featured. |
 | Sensitive       | boolean             | one                 | If true the item contains sensitive content and should not be made publicly available. |
+| ListingOrder    | string              | one                 | The listing order of the item within its parent manuscript part. This is generally, but not always, consistent with the order of the physical pages in the volume. |
+| Date            | [`date`](#date)     | none or one         | Metadata associated with the date or period of time, if known, during which the manuscript item was collected. |
+| Title           | string              | none or one         | The title of the item, if one is given |
+| Extract         | string              | none or one         | A brief extract from the text of the item. Typically provided if no `title` property can be specified. |
+| Pages           | integer             | one or many         | Specifies the page identifier(s) associated with the item. |
+| FirstPageID     | integer             | one                 | Identifies the initial page associated with the item. Note that if the item does not span more than one page this will have the same value as the `LastPageID` |
+| LastPageID     | integer             | one                 | Identifies the final page associated with the item. Note that if the item does not span more than one page this will have the same value as the `FirstPageID` |
 
 ## The Photographic Collection (CBÉG)
 
