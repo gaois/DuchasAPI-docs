@@ -77,9 +77,9 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the manuscript part. |
 | Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the manuscript part. |
 | LocationsAbroad | [`locationAbroad`](#locationAbroad) | none or one or many | Denotes a location or locations outside of Ireland associated with the manuscript part. |
-| Collectors      | [`person`](#person) | none or one or many | Denotes persons involved in collecting the material within the manuscript part. |
-| Informants      | [`person`](#person) | none or one or many | Denotes persons from whom material was obtained in the course of compiling the manuscript part. |
-| RelevantPersons | [`person`](#person) | none or one or many | Denotes persons referenced within, or otherwise associated with, the manuscript part.  |
+| Collectors      | [`person`](#person) | none or one or many | Denotes a person or persons involved in collecting the material within the manuscript part. |
+| Informants      | [`person`](#person) | none or one or many | Denotes a person or persons from whom material was obtained in the course of compiling the manuscript part. |
+| RelevantPersons | [`person`](#person) | none or one or many | Denotes a person or persons referenced within, or otherwise associated with, the manuscript part.  |
 | ExtraInfoStatus | string              | none or one         | Specifies the publication [status](#extraInfoStatus) of the `ExtraInfoEN` and `ExtraInfoGA` fields. |
 | ExtraInfoEN     | string              | none or one         | Free-text remarks on the manuscript part (in English). Authored as part of the Dúchas project. |
 | ExtraInfoGA     | string              | none or one         | Free-text remarks on the manuscript part (in Irish). Authored as part of the Dúchas project. |
@@ -102,10 +102,19 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | FirstPageID     | integer             | one                 | Identifies the initial page associated with the item. Note that if the item does not span more than one page this will have the same value as the `LastPageID` |
 | LastPageID      | integer             | one                 | Identifies the final page associated with the item. Note that if the item does not span more than one page this will have the same value as the `FirstPageID` |
 | ContentType     | string              | none or one         | The [`contentType`](#contentType) of the manuscript item |
-| ContentModes    | string              | none or one or many | Denotes the `contentMode`(#contentMode) or writing mode(s) of the manuscript item  |
+| ContentModes    | string              | none or one or many | Denotes the [`contentMode`](#contentMode) or writing mode(s) of the manuscript item  |
 | ContentScripts  | ISO 15924 script code | none or one or many | Denotes the writing script(s) of the manuscript item |
 | Languages       | ISO 639-1 language code | none or one or many | Denotes the writing language(s) of the manuscript item |
-
+| Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties associated with the manuscript item. |
+| LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the manuscript item. |
+| Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the manuscript item. |
+| LocationsAbroad | [`locationAbroad`](#locationAbroad) | none or one or many | Denotes a location or locations outside of Ireland associated with the manuscript item. |
+| Collectors      | [`person`](#person) | none or one or many | Denotes a person or persons involved in collecting the manuscript item. |
+| Informants      | [`person`](#person) | none or one or many | Denotes a person or persons from whom the manuscript item was obtained. |
+| RelevantPersons | [`person`](#person) | none or one or many | Denotes a person or persons referenced within, or otherwise associated with, the manuscript item.  |
+| ExtraInfoStatus | string              | none or one         | Specifies the publication [status](#extraInfoStatus) of the `ExtraInfoEN` and `ExtraInfoGA` fields. |
+| ExtraInfoEN     | string              | none or one         | Free-text remarks on the manuscript item (in English). Authored as part of the Dúchas project. |
+| ExtraInfoGA     | string              | none or one         | Free-text remarks on the manuscript item (in Irish). Authored as part of the Dúchas project. |
 
 ### Main Manuscript values
 
