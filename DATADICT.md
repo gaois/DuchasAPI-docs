@@ -30,6 +30,7 @@ This document describes the data structure of the collections made available via
   - [`locationIreland`](#locationIreland)
 - [Common values](#common-values)
   - [`status`](#status)
+  - [`extraInfoStatus`](#extraInfoStatus)
   
 ## The Main Manuscript Collection (CBÉ)
 
@@ -207,15 +208,6 @@ Specifies the publication status of the `ArchivedDescription` field.
 | EDIT            | The `ArchivedDescription` field is not suitable for publication |
 | PUB             | The `ArchivedDescription` field is suitable for publication |
 
-#### `extraInfoStatus`
-
-Specifies the publication status of the `extraInfo` field.
-
-| Value           | Description               |
-| :-------------- | :------------------------ |
-| EDIT            | The `extraInfo` field is not suitable for publication |
-| PUB             | The `extraInfo` field is suitable for publication |
-
 ## The Persons Database (CBÉD)
 
 Queries to the Persons Database may return one or more `person` objects. The information below describes the properties of this object type.
@@ -357,3 +349,13 @@ Specifies the entry's editorial status. Only entries with a status value of **4*
 | 2               | First editorial check complete |
 | 3               | Second editorial pass complete |
 | 4               | Second editorial check complete |
+
+#### `extraInfoStatus`
+
+Specifies the publication status of the `extraInfo` field.
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+| EDIT            | The `extraInfo` field, if present, is not suitable for publication |
+| PUB             | The `extraInfo` field, if present, is suitable for publication |
+
