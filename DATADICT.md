@@ -49,8 +49,8 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
 | VolumeNumber    | string              | none or one         | The volume's NFC archival reference number |
 | Status          | integer             | one                 | Specifies the entry's editorial [status](#status)  |
-| Pages           | [`page`](#page)     | one                 | Metadata describing the volume's physical pages |
-| Parts           | [`part`](#part)     | none or one         | Metadata describing the logical parts which subdivide the manuscript volume and their contents |
+| Pages           | [`page`](#main-manuscript-page)     | one                 | Metadata describing the volume's physical pages |
+| Parts           | [`part`](#main-manuscript-part)     | none or one         | Metadata describing the logical parts which subdivide the manuscript volume and their contents |
 
 ### Main Manuscript `page`
 
