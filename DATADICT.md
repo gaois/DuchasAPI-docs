@@ -34,6 +34,10 @@ This document describes the data structure of the collections made available via
   
 ## The Main Manuscript Collection (CBÉ)
 
+The Main Manuscript Collection consists of stories, accounts, questionnaires, diaries and other materials which have been physically bound into volumes. Each volume is represented in the data set by a `volume` entity, and each page by a `page` entity. Each `page` record also contains a reference that identifies scanned image of the page. Together, `volume` and `page` entities represent the collection’s **physical structure**. In parallel to the physical structure, a **logical structure** exists which annotates and indexes the physical structure. It consists of `part` and `item` entites.
+
+A `part` entity represents a distinct section within a manuscript volume and may have originally been physically separate from the other contents of the volume (consonant with the [`msPart`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt) element as specified in the Text Encoding Initiative (TEI) P5 Guidelines). An `item` entity represents a discrete work, such as a story or diary entry. It is consonant with the TEI [msItem](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mscoit) element. Notice that mapping between items and pages is many-to-many: an item can span over several pages and a page can accommodate several items. An `item` record also contains detailed data about the people who were involved in its writing, the subject it pertains to and other data.
+
 Queries to the Main Manuscript Collection may return one or more `volume` objects. The information below describes the properties of this object type.
 
 ### `volume`
