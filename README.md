@@ -139,7 +139,7 @@ Use these query parameters to filter the results returned by the API.
 | Name          | Collection   | Type          | Description    |
 | :------------ | :----------- | :------------ | :------------- |
 | `Status`      | CBÉG         | integer       | Filter by editorial status (0-4) |
-| `Digitized`   | CBÉG         | boolean       | Filter by digitization status (0-4) |
+| `Digitized`   | CBÉG         | boolean       | Filter by digitization status |
 | `Copyright`   | CBÉG         | string        | Filter by copyright holder (e.g. CBE, UNK) |
 | `Condition`   | CBÉG         | integer       | Filter by physical condition (0-3) |
 | `HandbookTopic`   | CBÉG         | string        | Filter by [*A Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg) subject code (e.g. B005) |
