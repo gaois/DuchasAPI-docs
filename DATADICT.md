@@ -112,9 +112,21 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | Collectors      | [`person`](#person) | none or one or many | Denotes a person or persons involved in collecting the manuscript item. |
 | Informants      | [`person`](#person) | none or one or many | Denotes a person or persons from whom the manuscript item was obtained. |
 | RelevantPersons | [`person`](#person) | none or one or many | Denotes a person or persons referenced within, or otherwise associated with, the manuscript item.  |
+| LinkedItems     | [`ManuscriptItemLink`](#manuscriptItemLink) | none or one or many | Denotes one or more manuscript items which are connected to this item. Typically the items are linked by a sequential relationship (e.g. the other items precede or follow the current item in a series of continuing or related stories). | 
 | ExtraInfoStatus | string              | none or one         | Specifies the publication [status](#extraInfoStatus) of the `ExtraInfoEN` and `ExtraInfoGA` fields. |
 | ExtraInfoEN     | string              | none or one         | Free-text remarks on the manuscript item (in English). Authored as part of the Dúchas project. |
 | ExtraInfoGA     | string              | none or one         | Free-text remarks on the manuscript item (in Irish). Authored as part of the Dúchas project. |
+
+### `manuscriptItemLink`
+
+Denotes a manuscript item which is directly connected to another manuscript item. Typically the items are linked by a sequential relationship (e.g. the other items precede or follow the current item in a series of continuing or related stories).
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| PartID          | integer             | one                 | The `part` identifier associated with the linked manuscript item. |
+| PageID          | integer             | one                 | The `page` identifier associated with the initial page of the linked manuscript item. |
+| ItemID          | integer             | one                 | The identifer of the linked manuscript `item`. |
+| Sequence        | string              | none or one         | Describes the linked item's sequential relationship (`PREV` if the linked item precedes the current item in sequence; `NEXT` if the linked item follows). |
 
 ### Main Manuscript values
 
