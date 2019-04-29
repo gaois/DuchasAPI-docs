@@ -136,12 +136,17 @@ This section describes values particular to properties of the Main Manuscript `v
 
 | Value           | Description               |
 | :-------------- | :------------------------ |
+| CÍN-LAE         | Diary entry.              |
+| CEIST           | Questionnaire.            |
+| COMH            | Correspondence.           |
 
 #### `contentMode`
 
 | Value           | Description               |
 | :-------------- | :------------------------ |
-
+| LÁMH            | Handwritten text.         |
+| CLÓ             | Typewritten text.         |
+| LÍN             | Drawing.                  |
 
 ## The Photographic Collection (CBÉG)
 
