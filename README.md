@@ -92,9 +92,9 @@ As an alternative, pass the API key as the username (with an empty password) usi
 
 > `'https://API_KEY_HERE@test.duchas.ie/api/v0.5/cbed/1740563'`
 
-## API access permissions
+## API access privileges
 
-The Dúchas API will cater to a number of different consumer types, including public users, archival users and internal systems. As a result of this, each API user and their associated API key is granted access permissions in accordance with our Terms of Service. Material that has been deemed sensitive by our editorial team is withheld from public API consumers, for example, as well as other metadata designed for internal use. If you have any questions regarding your current permissions level please [contact us](mailto:eolas@duchas.ie).
+The Dúchas API caters to a number of different consumer types, including public users, archival users and internal clients. As a result of this, each API user—identified through their associated API key—is granted access permissions in accordance with our Terms of Service. Privileged consumers have access to material that is not yet ready, or is deemed unsuitable, for publication as well as  internal editorial metadata. They can also filter query results according to certain additional parameters. Metadata and query parameters which are unavailable to public consumers are labelled 'Privileged' in the API documentation. Generally speaking, only internal clients in UCD and DCU are privileged consumers. If you have any questions regarding your current access privileges please [contact us](mailto:eolas@duchas.ie).
 
 ## Security
 
