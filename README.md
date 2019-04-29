@@ -138,6 +138,11 @@ Use these query parameters to filter the results returned by the API.
 
 | Name          | Type          | Description    |
 | :------------ | :------------ | :------------- |
+| `VolumeID`    | integer       | Filter by manuscript volume identifer |
+| `PageID`      | integer       | Filter by manuscript page identifer |
+| `PartID`      | integer       | Filter by manuscript part identifer |
+| `ItemID`      | integer       | Filter by manuscript item identifer |
+| `Status`      | integer       | Filter by editorial status (0-4) |
 
 #### The Photographic Collection (CBÉG)
 
@@ -148,11 +153,11 @@ Use these query parameters to filter the results returned by the API.
 | `Copyright`   | string        | Filter by copyright holder (e.g. CBE, UNK) |
 | `Condition`   | integer       | Filter by physical condition (0-3) |
 | `HandbookTopic` | string        | Filter by [*A Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg) subject code (e.g. B005) |
-| `PhotographerID` | integer       | Filter by photographer's CBÉD ID |
-| `RelevantPersonID` | integer       | Filter by person's CBÉD ID |
+| `PhotographerID` | integer       | Filter by photographer's CBÉD identifer |
+| `RelevantPersonID` | integer       | Filter by person's CBÉD identifer |
 | `Country`     | ISO 3166 country code*       | Filter by country ISO code (e.g. DE, US, GB-ENG) |
-| `LogainmID`   | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename ID  |
-| `GeoNameID`   | integer       | Filter by [GeoName](https://www.geonames.org) placename ID  |
+| `LogainmID`   | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename identifer  |
+| `GeoNameID`   | integer       | Filter by [GeoName](https://www.geonames.org) placename identifer  |
 | `DateFrom`    | integer**     | Retrieve records associated with this year or later |
 | `DateTo`      | integer**     | Retrieve records associated with this year or earlier |
 | `DateAccuracy` | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION) |
@@ -173,8 +178,8 @@ Use these query parameters to filter the results returned by the API.
 | `AinmID`      | integer       | Filter by [ainm.ie](https://www.ainm.ie) entry ID  |
 | `ViafID`      | integer       | Filter by [VIAF](https://viaf.org/) entryID  |
 | `Country`     | ISO 3166 country code* | Filter by country ISO code (e.g. DE, US, GB-ENG) |
-| `LogainmID`   | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename ID  |
-| `GeoNameID`   | integer       | Filter by [GeoName](https://www.geonames.org) placename ID  |
+| `LogainmID`   | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename identifer  |
+| `GeoNameID`   | integer       | Filter by [GeoName](https://www.geonames.org) placename identifer  |
 | `Occupation`  | string        | Filter by occupation (e.g. IASC, FEIRM) |
 | `BirthDateFrom` | integer**     | Retrieve records associated with this birth year or later |
 | `BirthDateTo` | integer**     | Retrieve records associated with this birth year or earlier |
