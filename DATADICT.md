@@ -58,8 +58,8 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | ID              | integer             | one                 | The page identifier (unique within collection) |
 | PageNumber      | string              | one                 | The page number     |
-| ListingOrder    | string              | one                 |  |
-| ImageFileName   | string              | one                 |  |
+| ListingOrder    | string              | one                 | The listing order of this page in the volume. This is generally, but not always, identical to the page number as written on the page itself. |
+| ImageFileName   | string              | one                 | The file name that identifies the scanned image of the page |
 | Sensitive       | boolean             | one                 | If true the page contains sensitive content and should not be made publicly available |
 
 ### `part`
