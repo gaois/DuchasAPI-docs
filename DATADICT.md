@@ -44,53 +44,53 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
-| ID              | integer             | one                 | The volume identifier (unique within collection) |
-| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation  |
-| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
-| VolumeNumber    | string              | none or one         | The volume's NFC archival reference number |
-| Status          | integer             | one                 | Specifies the entry's editorial [status](#status)  |
-| Pages           | [`page`](#main-manuscript-page)     | one                 | Metadata describing the volume's physical pages |
-| Parts           | [`part`](#main-manuscript-part)     | none or one         | Metadata describing the logical parts which subdivide the manuscript volume and their contents |
+| ID              | integer             | one                 | The volume identifier (unique within collection.) |
+| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation.  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
+| VolumeNumber    | string              | none or one         | The volume's NFC archival reference number. |
+| Status          | integer             | one                 | Specifies the entry's editorial [status](#status).  |
+| Pages           | [`page`](#main-manuscript-page)     | one                 | Metadata describing the volume's physical pages. |
+| Parts           | [`part`](#main-manuscript-part)     | none or one         | Metadata describing the logical parts which subdivide the manuscript volume and their contents. |
 
 ### Main Manuscript `page`
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
-| ID              | integer             | one                 | The page identifier (unique within collection) |
-| PageNumber      | string              | one                 | The page number     |
+| ID              | integer             | one                 | The page identifier (unique within collection). |
+| PageNumber      | string              | one                 | The page number.     |
 | ListingOrder    | string              | one                 | The listing order of the page within the volume. This is generally, but not always, identical to the page number as written on the page itself. |
-| ImageFileName   | string              | one                 | The file name that identifies the scanned image of the page |
-| Sensitive       | boolean             | one                 | If true the page contains sensitive content and should not be made publicly available |
+| ImageFileName   | string              | one                 | The file name that identifies the scanned image of the page. |
+| Sensitive       | boolean             | one                 | If true the page contains sensitive content and should not be made publicly available. |
 
 ### Main Manuscript `part`
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
-| ID              | integer             | one                 | The part identifier (unique within collection) |
-| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation  |
-| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
+| ID              | integer             | one                 | The part identifier (unique within collection). |
+| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation.  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | ListingOrder    | string              | one                 | The listing order of the manuscript part within the volume. |
 | TitlePages      | integer             | none or one or more | Denotes title pages associated with the manuscript part. Title pages may contain a general title, information about collectors or other introductory remarks. |
-| Date            | [`date`](#date)     | none or one         | Metadata associated with the date or period of time, if known, during which the manuscript part was compiled |
-| Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties associated with the manuscript part |
-| LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the manuscript part |
-| Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the manuscript part |
-| LocationsAbroad | [`locationAbroad`](#locationAbroad) | none or one or many | Denotes a location or locations outside of Ireland associated with the manuscript part |
-| Collectors      | [`person`](#person) | none or one or many | Denotes persons involved in collecting the material within the manuscript part |
-| Informants      | [`person`](#person) | none or one or many | Denotes persons from whom material was obtained in the course of compiling the manuscript part |
-| RelevantPersons | [`person`](#person) | none or one or many | Denotes persons referenced within, or otherwise associated with, the manuscript part  |
-| ExtraInfoStatus | string              | none or one         | Specifies the publication [status](#extraInfoStatus) of the `ExtraInfoEN` and `ExtraInfoGA` fields |
+| Date            | [`date`](#date)     | none or one         | Metadata associated with the date or period of time, if known, during which the manuscript part was compiled. |
+| Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties associated with the manuscript part. |
+| LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the manuscript part. |
+| Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the manuscript part. |
+| LocationsAbroad | [`locationAbroad`](#locationAbroad) | none or one or many | Denotes a location or locations outside of Ireland associated with the manuscript part. |
+| Collectors      | [`person`](#person) | none or one or many | Denotes persons involved in collecting the material within the manuscript part. |
+| Informants      | [`person`](#person) | none or one or many | Denotes persons from whom material was obtained in the course of compiling the manuscript part. |
+| RelevantPersons | [`person`](#person) | none or one or many | Denotes persons referenced within, or otherwise associated with, the manuscript part.  |
+| ExtraInfoStatus | string              | none or one         | Specifies the publication [status](#extraInfoStatus) of the `ExtraInfoEN` and `ExtraInfoGA` fields. |
 | ExtraInfoEN     | string              | none or one         | Free-text remarks on the manuscript part (in English). Authored as part of the Dúchas project. |
 | ExtraInfoGA     | string              | none or one         | Free-text remarks on the manuscript part (in Irish). Authored as part of the Dúchas project. |
-| Items           | [`item`](#item)     | none or one or many | Metadata describing the discrete items which compose the manuscript part |
+| Items           | [`item`](#item)     | none or one or many | Metadata describing the discrete items which compose the manuscript part. |
 
 ### Main Manuscript `item`
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
-| ID              | integer             | one                 | The item identifier (unique within collection) |
-| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation  |
-| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
+| ID              | integer             | one                 | The item identifier (unique within collection). |
+| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation.  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 
 ## The Photographic Collection (CBÉG)
 
@@ -100,32 +100,32 @@ Queries to the Photographic Collection may return one or more `photograph` objec
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
-| ID              | integer             | one                 | The photograph identifier (unique within collection) |
-| DateCreated     | ISO 8601 datetime   | one                 | The date and time of entry creation  |
-| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
-| ReferenceNumber | string              | none or one         | The NFC archival reference for the photograph      |
-| Status          | integer             | one                 | Specifies the entry's editorial [status](#status)  |
-| Sensitive       | boolean             | one                 | If true the entry contains sensitive content and should not be made publicly available |
-| Digitized       | boolean             | one                 | If true the entry is associated with a digitized image  |
-| Copyright       | string              | none or one         | Denotes the [copyright](#copyright) holder for the entry  |
-| Condition       | integer             | none or one         | Denotes the overall [condition](#condition) or clarity of the digitized image associated with this entry  |
-| ConditionDescription | string              | none or one         | Additional commentary on the image condition, where appropriate  |
-| HandbookTopic   | [`handbookTopic`](#handbookTopic)     | none or one         | Denotes the associated subject heading (topic) in Seán Ó Súilleabháin's [*A Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg) |
-| Date            | [`date`](#date)     | none or one         | Metadata associated with the photograph's capture date |
-| Photographer    | [`person`](#person) | none or one         | Denotes the person who captured the photograph |
-| RelevantPersons | [`person`](#person) | none or one or many | Denotes persons visible in, or otherwise associated with, the photograph |
-| Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties in which the photograph was captured |
-| LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the photograph |
-| Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the photograph |
-| LocationsAbroad | [`locationAbroad`](#locationAbroad) | none or one or many | Denotes a location or locations outside of Ireland associated with the photograph |
-| ArchivedDescriptionStatus | string        | none or one         | Specifies the publication [status](#archivedDescriptionStatus) of the `ArchivedDescription` field   |
+| ID              | integer             | one                 | The photograph identifier (unique within collection). |
+| DateCreated     | ISO 8601 datetime   | one                 | The date and time of entry creation.  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
+| ReferenceNumber | string              | none or one         | The NFC archival reference for the photograph.      |
+| Status          | integer             | one                 | Specifies the entry's editorial [status](#status).  |
+| Sensitive       | boolean             | one                 | If true the entry contains sensitive content and should not be made publicly available. |
+| Digitized       | boolean             | one                 | If true the entry is associated with a digitized image.  |
+| Copyright       | string              | none or one         | Denotes the [copyright](#copyright) holder for the entry.  |
+| Condition       | integer             | none or one         | Denotes the overall [condition](#condition) or clarity of the digitized image associated with this entry.  |
+| ConditionDescription | string              | none or one         | Additional commentary on the image condition, where appropriate.  |
+| HandbookTopic   | [`handbookTopic`](#handbookTopic)     | none or one         | Denotes the associated subject heading (topic) in Seán Ó Súilleabháin's [*A Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg). |
+| Date            | [`date`](#date)     | none or one         | Metadata associated with the photograph's capture date. |
+| Photographer    | [`person`](#person) | none or one         | Denotes the person who captured the photograph. |
+| RelevantPersons | [`person`](#person) | none or one or many | Denotes persons visible in, or otherwise associated with, the photograph. |
+| Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties in which the photograph was captured. |
+| LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the photograph. |
+| Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the photograph. |
+| LocationsAbroad | [`locationAbroad`](#locationAbroad) | none or one or many | Denotes a location or locations outside of Ireland associated with the photograph. |
+| ArchivedDescriptionStatus | string        | none or one         | Specifies the publication [status](#archivedDescriptionStatus) of the `ArchivedDescription` field.  |
 | ArchivedDescription | string             | none or one         | A free-text archival description of the photograph. Imported from NFC's previous data management system at the outset of the digitization process. |
 | ExtraInfoStatus | string              | none or one         | Specifies the publication [status](#extraInfoStatus) of the `ExtraInfoEN` and `ExtraInfoGA` fields |
 | ExtraInfoEN     | string              | none or one         | A free-text commentary on the photograph (in English). Authored as part of the Dúchas project. |
 | ExtraInfoGA     | string              | none or one         | A free-text commentary on the photograph (in Irish). Authored as part of the Dúchas project. |
-| Formats         | [`format`](#format)             | none or one or many  | Describes the physical image formats held by the NFC that are associated with the entry |
-| ArchivedInfo    | [`archivedInfo`](#archivedInfo)      | none or one         | Comprises the archival information imported from NFC's previous data management system at the outset of the digitization process |
-| Digitization    | [`digitization`](#digitization)      | none or one         | Metadata associated with the digitization of the archive image or images associated with this entry |
+| Formats         | [`format`](#format)             | none or one or many  | Describes the physical image formats held by the NFC that are associated with the entry. |
+| ArchivedInfo    | [`archivedInfo`](#archivedInfo)      | none or one         | Comprises the archival information imported from NFC's previous data management system at the outset of the digitization process. |
+| Digitization    | [`digitization`](#digitization)      | none or one         | Metadata associated with the digitization of the archive image or images associated with this entry. |
 
 ### `handbookTopic`
 
