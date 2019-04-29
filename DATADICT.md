@@ -81,6 +81,22 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation  |
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
 
+### Values
+
+This section describes values particular to properties of the `volume` object and its child objects.
+
+#### `status`
+
+Specifies the volume's editorial status. Only entries with a status value of **4** are deemed ready for publication.
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+| 0               | The photograph is newly ingested |
+| 1               | First editorial pass complete |
+| 2               | First editorial check complete |
+| 3               | Second editorial pass complete |
+| 4               | Second editorial check complete |
+
 ## The Photographic Collection (CBÉG)
 
 Queries to the Photographic Collection may return one or more `photograph` objects. The information below describes the properties of this object type.
@@ -179,18 +195,6 @@ As part of the Dúchas project photograph metadata from the NFC's previous data 
 
 This section describes values particular to properties of the `photograph` object.
 
-#### `status`
-
-Specifies the entry's editorial status. Only entries with a status value of **4** are deemed ready for publication.
-
-| Value           | Description               |
-| :-------------- | :------------------------ |
-| 0               | The photograph is newly ingested |
-| 1               | First editorial pass complete |
-| 2               | First editorial check complete |
-| 3               | Second editorial pass complete |
-| 4               | Second editorial check complete |
-
 #### `copyright`
 
 | Value           | Description               |
@@ -271,7 +275,7 @@ Queries to the Persons Database may return one or more `person` objects. The inf
 
 ## Common entities
 
-A number of data entities or value objects are common to multiple collections. These are described below.
+A number of entities are common to multiple collections. These are described below.
 
 ### `coordinates`
 
@@ -351,3 +355,19 @@ This property indicates the accuracy of the date information using standard [MOD
 | NameGA          | string              | one                 | The location name (in Irish) |
 | Coordinates     | [`coordinates`](#coordinates) | one                 | The location's geographical coordinates |
 | Counties        | [`county`](#county) | one or many         | The county or counties in which the location is situated |
+
+## Common values
+
+A number of properties with standardized values are common to multiple collections. These are described below.
+
+### `status`
+
+Specifies the entry's editorial status. Only entries with a status value of **4** are deemed ready for publication.
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+| 0               | The entry is newly ingested |
+| 1               | First editorial pass complete |
+| 2               | First editorial check complete |
+| 3               | Second editorial pass complete |
+| 4               | Second editorial check complete |
