@@ -136,6 +136,7 @@ This section describes values particular to properties of the Main Manuscript `v
 
 | Value           | Description               |
 | :-------------- | :------------------------ |
+| SEAN            | Folklore.                 |
 | CÍN-LAE         | Diary entry.              |
 | CEIST           | Questionnaire.            |
 | COMH            | Correspondence.           |
@@ -415,7 +416,7 @@ Specifies the entry's editorial status. Only entries with a status value of **4*
 | 3               | Second editorial pass complete. |
 | 4               | Second editorial check complete. |
 
-#### `extraInfoStatus`
+### `extraInfoStatus`
 
 Specifies the publication status of the `extraInfo` field.
 
