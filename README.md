@@ -117,8 +117,8 @@ The resources provided by the API are accessed via unique paths appended to the 
 | GET         | `/api/v0.5/cbeg`              | CBÉG           | List of photographs and associated metadata |
 | GET         | `/api/v0.5/cbeg/{id}`         | CBÉG           | Metadata associated with an individual photograph |
 | GET         | `/api/v0.5/cbeg/topics/handbook`   | CBÉG           | Reference list of subject headings (topics) in Seán Ó Súilleabháin's [*An Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg). |
-| GET         | `/api/v0.5/counties`          | All            | Reference list of metadata associated with Irish counties |
-| GET         | `/api/v0.5/countries`         | All            | Reference list of metadata associated with countries |
+| GET         | `/api/v0.5/counties`          | N/A            | Reference list of metadata associated with Irish counties |
+| GET         | `/api/v0.5/countries`         | N/A            | Reference list of metadata associated with countries |
 
 - **Note:** Requests to the `/api/v0.5/cbe` endpoint must be filtered by at least one of the following parameters: `VolumeID`, `PageID`, `PartID`, `ItemID`,`LogainmID`, `GeoNameID`, `Country`, `CollectorID`, `InformantID`, or `PersonID`.
 - **Note:** Requests to the `/api/v0.5/cbeg` endpoint must be filtered by at least one of the following parameters: `LogainmID`, `GeoNameID`, `Country`, `PhotographerID`, or `PersonID`.
