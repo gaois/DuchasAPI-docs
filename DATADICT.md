@@ -69,8 +69,8 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | ID              | integer             | one                 | The part identifier (unique within collection) |
 | DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation  |
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
-| TitlePages      | integer             | none or one or more |  |
-| Date            | [`date`](#date)     | none or one         |  |
+| TitlePages      | integer             | none or one or more | Denotes title pages associated with the manuscript part. Title pages may contain a general title, information about collectors or other introductory remarks. |
+| Date            | [`date`](#date)     | none or one         | Metadata associated with the date or period of time, if known, during which the manuscript part was compiled |
 | Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties in which the photograph was captured |
 | LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the photograph |
 | Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the photograph |
