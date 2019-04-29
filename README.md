@@ -8,7 +8,7 @@
 2. [API overview](#api-overview)
 3. [API versioning](#api-versioning)
 4. [API authentication](#api-authentication)
-5. [API access permissions](#api-access-permissions)
+5. [API access privileges](#api-access-privileges)
 6. [Security](#security)
 7. [Resource paths](#resource-paths)
 8. [HTTP status codes](#http-status-codes)
@@ -211,7 +211,7 @@ The status of all requests will be communicated, in the first instance, via stan
 | Code  | Definition            | Further information |
 | :---- | :-------------------- | :------------------ |
 | 200   | OK                    | A JSON object will be returned  |
-| 400   | BAD REQUEST           | The request syntax was invalid—a string describing the error may be returned |
+| 400   | BAD REQUEST           | The request syntax was invalid—a JSON object describing the error may be returned |
 | 401   | UNAUTHORISED          | A valid API key was not provided |
 | 404   | NOT FOUND             | The resource does not exist |
 | 500   | INTERNAL SERVER ERROR | Please contact us at [eolas@duchas.ie](mailto:eolas@duchas.ie) quoting the request path |
