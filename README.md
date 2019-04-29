@@ -150,10 +150,10 @@ Use these query parameters to filter the results returned by the API.
 | `DateFrom`    | CBÉG         | integer       | Retrieve records associated with this year* or later |
 | `DateTo`      | CBÉG         | integer       | Retrieve records associated with this year* or earlier |
 | `DateAccuracy`      | CBÉG         | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION) |
-| `CreatedBefore`    | CBÉG         | datetime     | Retrieve records created before a given date in `YYYY-MM-DD` format |
-| `CreatedSince`     | CBÉG         | datetime     | Retrieve records created after a given date in `YYYY-MM-DD` format |
-| `ModifiedBefore`    | CBÉG         | datetime     | Retrieve records last updated before a given date in `YYYY-MM-DD` format |
-| `ModifiedSince`     | CBÉG         | datetime     | Retrieve records last updated after a given date in `YYYY-MM-DD` format |
+| `CreatedBefore`    | CBÉD         | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format |
+| `CreatedSince`     | CBÉD         | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format |
+| `ModifiedBefore`    | CBÉD         | ISO 8601 datetime | Retrieve records last updated before a given date in `YYYY-MM-DD` format |
+| `ModifiedSince`     | CBÉD         | ISO 8601 datetime | Retrieve records last updated after a given date in `YYYY-MM-DD` format |
 
 - **Note:** The two-letter country codes accepted by the `Country` parameter conform to the [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html) standard. However, four additional ISO 3166-2 codes are accepted to facilitate differentiation between England, Northern Ireland, Scotland, and Wales. These are, respectively: `GB-ENG`, `GB-NIR`, `GB-SCT` and `GB-WLS`.
 - **Note:** The `DateFrom` and `DateTo` parameters currently only accept years in `YYYY` format. A future verison of the API will accept queries in `YYYY-MM-DD` format.
@@ -175,10 +175,10 @@ Use these query parameters to filter the results returned by the API.
 | `DeathDateFrom`    | CBÉD         | integer       | Retrieve records associated with this death year* or later |
 | `DeathDateTo`      | CBÉD         | integer       | Retrieve records associated with this death year* or earlier |
 | `DeathDateAccuracy`      | CBÉD         | string       | Filter by accuracy of death date record (APPROX, INFER, QUESTION) 
-| `CreatedBefore`    | CBÉD         | datetime     | Retrieve records created before a given date in `YYYY-MM-DD` format |
-| `CreatedSince`     | CBÉD         | datetime     | Retrieve records created after a given date in `YYYY-MM-DD` format |
-| `ModifiedBefore`    | CBÉD         | datetime     | Retrieve records last updated before a given date in `YYYY-MM-DD` format |
-| `ModifiedSince`     | CBÉD         | datetime     | Retrieve records last updated after a given date in `YYYY-MM-DD` format |
+| `CreatedBefore`    | CBÉD         | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format |
+| `CreatedSince`     | CBÉD         | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format |
+| `ModifiedBefore`    | CBÉD         | ISO 8601 datetime | Retrieve records last updated before a given date in `YYYY-MM-DD` format |
+| `ModifiedSince`     | CBÉD         | ISO 8601 datetime | Retrieve records last updated after a given date in `YYYY-MM-DD` format |
 
 - **Note:** The two-letter country codes accepted by the `Country` parameter conform to the [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html) standard. However, four additional ISO 3166-2 codes are accepted to facilitate differentiation between England, Northern Ireland, Scotland, and Wales. These are, respectively: `GB-ENG`, `GB-NIR`, `GB-SCT` and `GB-WLS`.
 - **Note:** The `DateFrom` and `DateTo` parameters currently only accept years in `YYYY` format. A future verison of the API will accept queries in `YYYY-MM-DD` format.
