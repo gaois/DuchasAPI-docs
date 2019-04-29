@@ -110,6 +110,7 @@ The resources provided by the API are accessed via unique paths appended to the 
 | :---------- | :---------------------------- | :------------- | :------------------------ |
 | GET         | `/api`                        | N/A            | General API metadata      |
 | GET         | `/api/v0.5`                   | N/A            | General API metadata      |
+| GET         | `/api/v0.5/cbe`               | CBÉ            | List of manuscript volumes and associated metadata |
 | GET         | `/api/v0.5/cbed`              | CBÉD           | List of persons and associated metadata |
 | GET         | `/api/v0.5/cbed/{id}`         | CBÉD           | Metadata associated with an individual person |
 | GET         | `/api/v0.5/cbed/occupations`  | CBÉD           | Reference list of metadata associated with occupations |
@@ -119,6 +120,7 @@ The resources provided by the API are accessed via unique paths appended to the 
 | GET         | `/api/v0.5/counties`          | All            | Reference list of metadata associated with Irish counties |
 | GET         | `/api/v0.5/countries`         | All            | Reference list of metadata associated with countries |
 
+- **Note:** Requests to the `/api/v0.5/cbe` endpoint must be filtered by at least one of the following parameters: `VolumeID`, `PageID`, `PartID`, `ItemID`,`LogainmID`, `GeoNameID`, `Country`, `CollectorID`, `InformantID`, or `PersonID`.
 - **Note:** Requests to the `/api/v0.5/cbeg` endpoint must be filtered by at least one of the following parameters: `LogainmID`, `GeoNameID`, `Country`, `PhotographerID`, or `PersonID`.
 
 ### URL path parameters
