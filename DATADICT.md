@@ -102,15 +102,21 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | FirstPageID     | integer             | one                 | Identifies the initial page associated with the item. Note that if the item does not span more than one page this will have the same value as the `LastPageID` |
 | LastPageID      | integer             | one                 | Identifies the final page associated with the item. Note that if the item does not span more than one page this will have the same value as the `FirstPageID` |
 | ContentType     | string              | none or one         | The [`contentType`](#contentType) of the manuscript item |
-| ContentModes    | string              | none or one or many | |
-| ContentScripts  | string              | none or one or many | |
-| Languages       | string              | none or one or many | |
+| ContentModes    | string              | none or one or many | Denotes the `contentMode`(#contentMode) or writing mode(s) of the manuscript item  |
+| ContentScripts  | ISO 15924 script code | none or one or many | Denotes the writing script(s) of the manuscript item |
+| Languages       | ISO 639-1 language code | none or one or many | Denotes the writing language(s) of the manuscript item |
+
 
 ### Main Manuscript values
 
 This section describes values particular to properties of the Main Manuscript `volume` object and its child objects.
 
 #### `contentType`
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+
+#### `contentMode`
 
 | Value           | Description               |
 | :-------------- | :------------------------ |
