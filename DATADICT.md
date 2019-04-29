@@ -11,6 +11,7 @@ This document describes the data structure of the collections made available via
   - [`page`](#main-manuscript-page)
   - [`part`](#main-manuscript-part)
   - [`item`](#main-manuscript-item)
+  - [Main Manuscript values](#main-manuscript-values)
 - [The Photographic Collection](#the-photographic-collection-cbég)
   - [`photograph`](#photograph)
   - [`handbookTopic`](#handbookTopic)
@@ -95,11 +96,25 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | Sensitive       | boolean             | one                 | If true the item contains sensitive content and should not be made publicly available. |
 | ListingOrder    | string              | one                 | The listing order of the item within its parent manuscript part. This is generally, but not always, consistent with the order of the physical pages in the volume. |
 | Date            | [`date`](#date)     | none or one         | Metadata associated with the date or period of time, if known, during which the manuscript item was collected. |
-| Title           | string              | none or one         | The title of the item, if one is given |
+| Title           | string              | none or one         | The title of the item, if one is given. |
 | Extract         | string              | none or one         | A brief extract from the text of the item. Typically provided if no `title` property can be specified. |
 | Pages           | integer             | one or many         | Specifies the page identifier(s) associated with the item. |
 | FirstPageID     | integer             | one                 | Identifies the initial page associated with the item. Note that if the item does not span more than one page this will have the same value as the `LastPageID` |
-| LastPageID     | integer             | one                 | Identifies the final page associated with the item. Note that if the item does not span more than one page this will have the same value as the `FirstPageID` |
+| LastPageID      | integer             | one                 | Identifies the final page associated with the item. Note that if the item does not span more than one page this will have the same value as the `FirstPageID` |
+| ContentType     | string              | none or one         | The [`contentType`](#contentType) of the manuscript item |
+| ContentModes    | string              | none or one or many | |
+| ContentScripts  | string              | none or one or many | |
+| Languages       | string              | none or one or many | |
+
+### Main Manuscript values
+
+This section describes values particular to properties of the Main Manuscript `volume` object and its child objects.
+
+#### `contentType`
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+
 
 ## The Photographic Collection (CBÉG)
 
