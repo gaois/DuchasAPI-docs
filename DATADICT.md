@@ -83,22 +83,6 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation  |
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
 
-### Values
-
-This section describes values particular to properties of the `volume` object and its child objects.
-
-#### `status`
-
-Specifies the volume's editorial status. Only entries with a status value of **4** are deemed ready for publication.
-
-| Value           | Description               |
-| :-------------- | :------------------------ |
-| 0               | The photograph is newly ingested |
-| 1               | First editorial pass complete |
-| 2               | First editorial check complete |
-| 3               | Second editorial pass complete |
-| 4               | Second editorial check complete |
-
 ## The Photographic Collection (CBÉG)
 
 Queries to the Photographic Collection may return one or more `photograph` objects. The information below describes the properties of this object type.
