@@ -58,7 +58,7 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | ID              | integer             | one                 | The page identifier (unique within collection) |
 | PageNumber      | string              | one                 | The page number     |
-| ListingOrder    | string              | one                 | The listing order of this page in the volume. This is generally, but not always, identical to the page number as written on the page itself. |
+| ListingOrder    | string              | one                 | The listing order of the page within the volume. This is generally, but not always, identical to the page number as written on the page itself. |
 | ImageFileName   | string              | one                 | The file name that identifies the scanned image of the page |
 | Sensitive       | boolean             | one                 | If true the page contains sensitive content and should not be made publicly available |
 
@@ -69,6 +69,7 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | ID              | integer             | one                 | The part identifier (unique within collection) |
 | DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation  |
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry  |
+| ListingOrder    | string              | one                 | The listing order of the manuscript part within the volume. |
 | TitlePages      | integer             | none or one or more | Denotes title pages associated with the manuscript part. Title pages may contain a general title, information about collectors or other introductory remarks. |
 | Date            | [`date`](#date)     | none or one         | Metadata associated with the date or period of time, if known, during which the manuscript part was compiled |
 | Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties associated with the manuscript part |
@@ -78,6 +79,9 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | Collectors      | [`person`](#person) | none or one or many | Denotes persons involved in collecting the material within the manuscript part |
 | Informants      | [`person`](#person) | none or one or many | Denotes persons from whom material was obtained in the course of compiling the manuscript part |
 | RelevantPersons | [`person`](#person) | none or one or many | Denotes persons referenced within, or otherwise associated with, the manuscript part  |
+| ExtraInfoStatus | string              | none or one         | Specifies the publication [status](#extraInfoStatus) of the `ExtraInfoEN` and `ExtraInfoGA` fields |
+| ExtraInfoEN     | string              | none or one         | Free-text remarks on the manuscript part (in English). Authored as part of the Dúchas project. |
+| ExtraInfoGA     | string              | none or one         | Free-text remarks on the manuscript part (in Irish). Authored as part of the Dúchas project. |
 | Items           | [`item`](#item)     | none or one or many | Metadata describing the discrete items which compose the manuscript part |
 
 ### Main Manuscript `item`
