@@ -145,11 +145,11 @@ Use these query parameters to filter the results returned by the API.
 | `HandbookTopic`   | CBÉG         | string        | Filter by [*A Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg) subject code (e.g. B005) |
 | `PhotographerID`   | CBÉG         | integer       | Filter by photographer's CBÉD ID |
 | `RelevantPersonID`   | CBÉG         | integer       | Filter by person's CBÉD ID |
-| `Country`     | CBÉG         | string*       | Filter by country ISO code (e.g. DE, US, GB-ENG) |
+| `Country`     | CBÉG         | ISO 3166 country code*       | Filter by country ISO code (e.g. DE, US, GB-ENG) |
 | `LogainmID`   | CBÉG         | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename ID  |
 | `GeoNameID`   | CBÉG         | integer       | Filter by [GeoName](https://www.geonames.org) placename ID  |
-| `DateFrom`    | CBÉG         | integer**     | Retrieve records associated with this year* or later |
-| `DateTo`      | CBÉG         | integer**     | Retrieve records associated with this year* or earlier |
+| `DateFrom`    | CBÉG         | integer**     | Retrieve records associated with this year or later |
+| `DateTo`      | CBÉG         | integer**     | Retrieve records associated with this year or earlier |
 | `DateAccuracy`      | CBÉG         | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION) |
 | `CreatedBefore`    | CBÉD         | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format |
 | `CreatedSince`     | CBÉD         | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format |
@@ -167,15 +167,15 @@ Use these query parameters to filter the results returned by the API.
 | `Gender`      | CBÉD         | string        | Filter by person's gender (f, m)  |
 | `AinmID`      | CBÉD         | integer       | Filter by [ainm.ie](https://www.ainm.ie) entry ID  |
 | `ViafID`      | CBÉD         | integer       | Filter by [VIAF](https://viaf.org/) entryID  |
-| `Country`     | CBÉD         | string*        | Filter by country ISO code (e.g. DE, US, GB-ENG) |
+| `Country`     | CBÉD         | ISO 3166 country code*        | Filter by country ISO code (e.g. DE, US, GB-ENG) |
 | `LogainmID`   | CBÉD         | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename ID  |
 | `GeoNameID`   | CBÉD         | integer       | Filter by [GeoName](https://www.geonames.org) placename ID  |
 | `Occupation`  | CBÉD         | string        | Filter by occupation (e.g. IASC, FEIRM) |
-| `BirthDateFrom`    | CBÉD         | integer**     | Retrieve records associated with this birth year* or later |
-| `BirthDateTo`      | CBÉD         | integer**     | Retrieve records associated with this birth year* or earlier |
+| `BirthDateFrom`    | CBÉD         | integer**     | Retrieve records associated with this birth year or later |
+| `BirthDateTo`      | CBÉD         | integer**     | Retrieve records associated with this birth year or earlier |
 | `BirthDateAccuracy`      | CBÉD         | string       | Filter by accuracy of birth date record (APPROX, INFER, QUESTION) |
-| `DeathDateFrom`    | CBÉD         | integer**     | Retrieve records associated with this death year* or later |
-| `DeathDateTo`      | CBÉD         | integer**     | Retrieve records associated with this death year* or earlier |
+| `DeathDateFrom`    | CBÉD         | integer**     | Retrieve records associated with this death year or later |
+| `DeathDateTo`      | CBÉD         | integer**     | Retrieve records associated with this death year or earlier |
 | `DeathDateAccuracy`      | CBÉD         | string       | Filter by accuracy of death date record (APPROX, INFER, QUESTION) 
 | `CreatedBefore`    | CBÉD         | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format |
 | `CreatedSince`     | CBÉD         | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format |
