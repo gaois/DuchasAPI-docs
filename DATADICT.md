@@ -28,6 +28,8 @@ This document describes the data structure of the collections made available via
   - [`date`](#date)
   - [`locationAbroad`](#locationAbroad)
   - [`locationIreland`](#locationIreland)
+- [Common values](#common-values)
+  - [`status`](#status)
   
 ## The Main Manuscript Collection (CBÉ)
 
