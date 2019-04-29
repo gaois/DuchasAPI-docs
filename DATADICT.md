@@ -17,7 +17,7 @@ This document describes the data structure of the collections made available via
   - [`format`](#format)
   - [`archivedInfo`](#archivedInfo)
   - [`digitization`](#digitization)
-  - [Values](#values)
+  - [`photograph` values](#photograph-values)
 - [The Persons Database](#the-persons-database-cbéd)
   - [`person`](#person)
   - [`name`](#name)
@@ -186,7 +186,7 @@ As part of the Dúchas project photograph metadata from the NFC's previous data 
 | ComputerOS      | string              | one                 | The operating system used. |
 | Storage         | string              | one                 | Image storage details. |
 
-### Values
+### `photograph` values
 
 This section describes values particular to properties of the `photograph` object.
 
