@@ -145,9 +145,11 @@ Use these query parameters to filter the results returned by the API.
 | `ItemID`      | integer       | Filter by manuscript item identifer. |
 | `CollectorID` | integer       | Filter by collector's CBÉD identifier. |
 | `InformantID` | integer       | Filter by informant's CBÉD identifier. |
-| `CollectorID` | integer       | Filter by collector's CBÉD identifier. |
 | `RelevantPersonID` | integer       | Filter by person's CBÉD identifer. |
 | `PersonID` | integer       | Filter by person's CBÉD identifer. This filter encompasses all person types (i.e. collector, informant, relevant person). |
+| `Country`     | ISO 3166 country code* | Filter by country ISO code (e.g. DE, US, GB-ENG). |
+| `LogainmID`   | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `GeoNameID`   | integer       | Filter by [GeoName](https://www.geonames.org) placename identifer.  |
 | `PartCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part created before a given date in `YYYY-MM-DD` format. |
 | `PartCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part created after a given date in `YYYY-MM-DD` format. |
 | `PartModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated before a given date in `YYYY-MM-DD` format. |
@@ -156,6 +158,8 @@ Use these query parameters to filter the results returned by the API.
 | `ItemCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript item created after a given date in `YYYY-MM-DD` format. |
 | `ItemModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript item last updated before a given date in `YYYY-MM-DD` format. |
 | `ItemModifiedSince` | ISO 8601 datetime | Retrieve records containing a manuscript item last updated after a given date in `YYYY-MM-DD` format. |
+
+**\*Note:** The two-letter country codes accepted by the `Country` parameter conform to the [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html) standard. However, four additional ISO 3166-2 codes are accepted to facilitate differentiation between England, Northern Ireland, Scotland, and Wales. These are, respectively: `GB-ENG`, `GB-NIR`, `GB-SCT` and `GB-WLS`.
 
 #### The Photographic Collection (CBÉG)
 
