@@ -139,6 +139,7 @@ Use these query parameters to filter the results returned by the API.
 | Name          | Type          | Description    |
 | :------------ | :------------ | :------------- |
 | `Status`      | integer       | Filter by editorial status (0-4). |
+| `VolumeNumber` | string        | Filter by manuscript volume archival reference |
 | `VolumeID`    | integer       | Filter by manuscript volume identifer. |
 | `PageID`      | integer       | Filter by manuscript page identifer. |
 | `PartID`      | integer       | Filter by manuscript part identifer. |
