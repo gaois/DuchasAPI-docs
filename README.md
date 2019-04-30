@@ -138,7 +138,7 @@ Use these query parameters to filter the results returned by the API.
 
 | Name          | Type          | Description    |
 | :------------ | :------------ | :------------- |
-| `Status` **(Privileged)**      | integer       | Filter by editorial status (0-4). |
+| `Status`      | integer       | Filter by editorial status (0-4). **(Privileged)** |
 | `VolumeNumber` | string        | Filter by manuscript volume archival reference (e.g. '0154') |
 | `VolumeID`    | integer       | Filter by manuscript volume identifer. |
 | `PageID`      | integer       | Filter by manuscript page identifer. |
@@ -166,7 +166,7 @@ Use these query parameters to filter the results returned by the API.
 
 | Name          | Type          | Description    |
 | :------------ | :------------ | :------------- |
-| `Status`      | integer       | Filter by editorial status (0-4). |
+| `Status`      | integer       | Filter by editorial status (0-4). **(Privileged)** |
 | `Digitized`   | boolean       | Filter by digitization status. |
 | `Copyright`   | string        | Filter by copyright holder (e.g. CBE, UNK). |
 | `Condition`   | integer       | Filter by physical condition (0-3). |
