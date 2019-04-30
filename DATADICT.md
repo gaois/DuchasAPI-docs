@@ -49,7 +49,7 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation.  |
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | VolumeNumber    | string              | none or one         | The volume's NFC archival reference number. |
-| Status          | integer             | one                 | Specifies the entry's editorial [status](#status).  |
+| Status          | integer             | one                 | Specifies the entry's editorial [status](#status). **(Privileged)**  |
 | Pages           | [`page`](#main-manuscript-page)     | one                 | Metadata describing the volume's physical pages. |
 | Parts           | [`part`](#main-manuscript-part)     | none or one         | Metadata describing the logical parts which subdivide the manuscript volume and their contents. |
 
@@ -61,7 +61,7 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | PageNumber      | string              | one                 | The page number.     |
 | ListingOrder    | string              | one                 | The listing order of the page within the volume. This is generally, but not always, identical to the page number as written on the page itself. |
 | ImageFileName   | string              | one                 | The file name that identifies the scanned image of the page. |
-| Sensitive       | boolean             | one                 | If true the page contains sensitive content and should not be made publicly available. |
+| Sensitive       | boolean             | one                 | If true the page contains sensitive content and should not be made publicly available. **(Privileged)** |
 
 ### Main Manuscript `part`
 
@@ -93,7 +93,7 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation.  |
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | EditorsPick     | ISO 8601 datetime   | none or one         | Denotes the date on which the item was featured as an [editors' pick](https://www.duchas.ie/en/ftr/) on the dúchas.ie website, if featured. |
-| Sensitive       | boolean             | one                 | If true the item contains sensitive content and should not be made publicly available. |
+| Sensitive       | boolean             | one                 | If true the item contains sensitive content and should not be made publicly available. **(Privileged)** |
 | ListingOrder    | string              | one                 | The listing order of the item within its parent manuscript part. This is generally, but not always, consistent with the order of the physical pages in the volume. |
 | Date            | [`date`](#date)     | none or one         | Metadata associated with the date or period of time, if known, during which the manuscript item was collected. |
 | Title           | string              | none or one         | The title of the item, if one is given. |
@@ -162,8 +162,8 @@ Queries to the Photographic Collection may return one or more `photograph` objec
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | EditorsPick     | ISO 8601 datetime   | none or one         | Denotes the date on which the photograph was featured as an [editors' pick](https://www.duchas.ie/en/ftr/) on the dúchas.ie website, if featured. |
 | ReferenceNumber | string              | none or one         | The NFC archival reference for the photograph.      |
-| Status          | integer             | one                 | Specifies the entry's editorial [status](#status).  |
-| Sensitive       | boolean             | one                 | If true the entry contains sensitive content and should not be made publicly available. |
+| Status          | integer             | one                 | Specifies the entry's editorial [status](#status). **(Privileged)**  |
+| Sensitive       | boolean             | one                 | If true the entry contains sensitive content and should not be made publicly available. **(Privileged)** |
 | Digitized       | boolean             | one                 | If true the entry is associated with a digitized image.  |
 | Copyright       | string              | none or one         | Denotes the [copyright](#copyright) holder for the entry.  |
 | Condition       | integer             | none or one         | Denotes the overall [condition](#condition) or clarity of the digitized image associated with this entry.  |
@@ -230,7 +230,7 @@ As part of the Dúchas project photograph metadata from the NFC's previous data 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | DateCaptured    | string              | one                 | Denotes the date of image digitization. |
-| Operator        | string              | one                 | The name of the operator responsible. |
+| Operator        | string              | one                 | The name of the operator responsible. **(Privileged)** |
 | CaptureDevice   | string              | one                 | The capture device used. |
 | CaptureSoftware | string              | one                 | The capture software used. |
 | SourceCondition | string              | one                 | The condition of the physical source image. |
