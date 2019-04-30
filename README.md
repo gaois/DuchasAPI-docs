@@ -143,6 +143,14 @@ Use these query parameters to filter the results returned by the API.
 | `PartID`      | integer       | Filter by manuscript part identifer |
 | `ItemID`      | integer       | Filter by manuscript item identifer |
 | `Status`      | integer       | Filter by editorial status (0-4) |
+| `PartCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part created before a given date in `YYYY-MM-DD` format |
+| `PartCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part created after a given date in `YYYY-MM-DD` format |
+| `PartModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated before a given date in `YYYY-MM-DD` format |
+| `PartModifiedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated after a given date in `YYYY-MM-DD` format |
+| `ItemCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript item created before a given date in `YYYY-MM-DD` format |
+| `ItemCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript item created after a given date in `YYYY-MM-DD` format |
+| `ItemModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript item last updated before a given date in `YYYY-MM-DD` format |
+| `ItemModifiedSince` | ISO 8601 datetime | Retrieve records containing a manuscript item last updated after a given date in `YYYY-MM-DD` format |
 
 #### The Photographic Collection (CBÉG)
 
