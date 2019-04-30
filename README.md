@@ -147,7 +147,7 @@ Use these query parameters to filter the results returned by the API.
 | `InformantID` | integer       | Filter by informant's CBÉD identifier. |
 | `CollectorID` | integer       | Filter by collector's CBÉD identifier. |
 | `RelevantPersonID` | integer       | Filter by person's CBÉD identifer. |
-| `PersonID` | integer       | Filter by person's CBÉD identifer. |
+| `PersonID` | integer       | Filter by person's CBÉD identifer. This filter encompasses all person types (i.e. collector, informant, relevant person). |
 | `PartCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part created before a given date in `YYYY-MM-DD` format. |
 | `PartCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part created after a given date in `YYYY-MM-DD` format. |
 | `PartModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated before a given date in `YYYY-MM-DD` format. |
