@@ -151,6 +151,9 @@ Use these query parameters to filter the results returned by the API.
 | `Country`     | ISO 3166 country code* | Filter by country ISO code (e.g. DE, US, GB-ENG). |
 | `LogainmID`   | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename identifer.  |
 | `GeoNameID`   | integer       | Filter by [GeoName](https://www.geonames.org) placename identifer.  |
+| `DateFrom`    | integer**     | Retrieve records associated with this year or later. |
+| `DateTo`      | integer**     | Retrieve records associated with this year or earlier. |
+| `DateAccuracy` | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION). |
 | `PartCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part created before a given date in `YYYY-MM-DD` format. |
 | `PartCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part created after a given date in `YYYY-MM-DD` format. |
 | `PartModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated before a given date in `YYYY-MM-DD` format. |
@@ -161,6 +164,8 @@ Use these query parameters to filter the results returned by the API.
 | `ItemModifiedSince` | ISO 8601 datetime | Retrieve records containing a manuscript item last updated after a given date in `YYYY-MM-DD` format. |
 
 **\*Note:** The two-letter country codes accepted by the `Country` parameter conform to the [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html) standard. However, four additional ISO 3166-2 codes are accepted to facilitate differentiation between England, Northern Ireland, Scotland, and Wales. These are, respectively: `GB-ENG`, `GB-NIR`, `GB-SCT` and `GB-WLS`.
+
+**\*\*Note:** The `DateFrom` and `DateTo` parameters currently only accept years in `YYYY` format.
 
 #### The Photographic Collection (CBÉG)
 
