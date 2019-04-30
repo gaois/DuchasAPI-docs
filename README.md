@@ -138,7 +138,7 @@ Use these query parameters to filter the results returned by the API.
 
 | Name          | Type          | Description    |
 | :------------ | :------------ | :------------- |
-| `Status` <span style="background-color: rgba(27,31,35,.05);border-radius:3px;font-size:85%;margin:0;padding:.2em.4em;">Privileged</span>      | integer       | Filter by editorial status (0-4). |
+| `Status` **(Privileged)**      | integer       | Filter by editorial status (0-4). |
 | `VolumeNumber` | string        | Filter by manuscript volume archival reference (e.g. '0154') |
 | `VolumeID`    | integer       | Filter by manuscript volume identifer. |
 | `PageID`      | integer       | Filter by manuscript page identifer. |
