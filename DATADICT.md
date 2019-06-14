@@ -336,7 +336,7 @@ A number of entities are common to multiple collections. These are described bel
 | NameEN          | string              | one                 | The county's English-language name. |
 | NameGA          | string              | one                 | The county's Irish-language name. |
 | QualifiedNameEN | string              | one                 | The county's English-language name, prefixed with "Co. " qualifier. |
-| QualifiedNameGA | string              | one                 | The county name including county (Co.) qualifier (in Irish). |
+| QualifiedNameGA | string              | one                 | The county's Irish-language name, prefixed with "Co. " qualifier and having the correct grammatical case and inflection applied. |
 | Coordinates     | [`coordinates`](#coordinates) | one                 | A set of geographic coordinates associated with the county. |
 
 ### `country`
@@ -346,7 +346,7 @@ A number of entities are common to multiple collections. These are described bel
 | IsoCode         | string              | one                 | The country's unique ISO 3166 country code (see note below). |
 | GeoNameID       | integer             | one                 | The country's unique identifier in the [geonames.org](http://www.geonames.org) database. |
 | NameEN          | string              | one                 | The country's English-language name. |
-| NameGA          | string              | one                 | The county's Irish-language name, prefixed with "Co. " qualifier and having the correct grammatical case and inflection applied. |
+| NameGA          | string              | one                 | The country's Irish-language name. |
 | Coordinates     | [`coordinates`](#coordinates) | one                 | A set of geographic coordinates associated with the country. |
 
 **Note:** Country codes in the `IsoCode` property adhere to the ISO 3166-1 standard except for England (`GB-ENG`), Northern Ireland (`GB-NIR`), Scotland (`GB-SCT`) and Wales (`GB-WLS`) where ISO 3166-2 codes are used. For these countries it was necessary to have greater resolution than the ISO 3166-1 standard provides.
