@@ -333,11 +333,11 @@ A number of entities are common to multiple collections. These are described bel
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | LogainmID       | integer             | one                 | The county's unique identifier in the [logainm.ie](https://www.logainm.ie) database. |
-| NameEN          | string              | one                 | The county name (in English). |
-| NameGA          | string              | one                 | The county name (in Irish). |
-| QualifiedNameEN | string              | one                 | The county name including county (Co.) qualifier (in English). |
+| NameEN          | string              | one                 | The county's English-language name. |
+| NameGA          | string              | one                 | The county's Irish-language name. |
+| QualifiedNameEN | string              | one                 | The county's English-language name, prefixed with "Co. " qualifier. |
 | QualifiedNameGA | string              | one                 | The county name including county (Co.) qualifier (in Irish). |
-| Coordinates     | [`coordinates`](#coordinates) | one                 | The location's geographical coordinates. |
+| Coordinates     | [`coordinates`](#coordinates) | one                 | A set of geographic coordinates associated with the county. |
 
 ### `country`
 
@@ -345,9 +345,9 @@ A number of entities are common to multiple collections. These are described bel
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | IsoCode         | string              | one                 | The country's unique ISO 3166 country code (see note below). |
 | GeoNameID       | integer             | one                 | The country's unique identifier in the [geonames.org](http://www.geonames.org) database. |
-| NameEN          | string              | one                 | The country name (in English). |
-| NameGA          | string              | one                 | The country name (in Irish). |
-| Coordinates     | [`coordinates`](#coordinates) | one                 | The location's geographical coordinates. |
+| NameEN          | string              | one                 | The country's English-language name. |
+| NameGA          | string              | one                 | The county's Irish-language name, prefixed with "Co. " qualifier and having the correct grammatical case and inflection applied. |
+| Coordinates     | [`coordinates`](#coordinates) | one                 | A set of geographic coordinates associated with the country. |
 
 **Note:** Country codes in the `IsoCode` property adhere to the ISO 3166-1 standard except for England (`GB-ENG`), Northern Ireland (`GB-NIR`), Scotland (`GB-SCT`) and Wales (`GB-WLS`) where ISO 3166-2 codes are used. For these countries it was necessary to have greater resolution than the ISO 3166-1 standard provides.
 
