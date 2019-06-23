@@ -201,6 +201,29 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | Teachers      | [`person`](#person) | none or one or many | Denotes a school teacher or teachers involved in collating the material within the manuscript part. |
 | Items           | [`item`](#item)     | none or one or many | Metadata describing the discrete items which compose the manuscript part. |
 
+### Schools' Collection `item`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The item identifier (unique within collection). |
+| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation.  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
+| EditorsPick     | ISO 8601 datetime   | none or one         | Denotes the date on which the item was featured as an [editors' pick](https://www.duchas.ie/en/ftr/) on the dúchas.ie website, if featured. |
+| Sensitive       | boolean             | one                 | If true the item contains sensitive content and should not be made publicly available. **(Privileged)** |
+| ListingOrder    | string              | one                 | The listing order of the item within its parent manuscript part. This is generally, but not always, consistent with the order of the physical pages in the volume. |
+| Title           | string              | none or one         | The title of the item, if one is given. |
+| Extract         | string              | none or one         | A brief extract from the text of the item. Typically provided if no `title` property can be specified. |
+| Pages           | integer             | one or many         | Specifies the page identifier(s) associated with the item. |
+| FirstPageID     | integer             | one                 | Identifies the initial page associated with the item. Note that if the item does not span more than one page this will have the same value as the `LastPageID` |
+| LastPageID      | integer             | one                 | Identifies the final page associated with the item. Note that if the item does not span more than one page this will have the same value as the `FirstPageID` |
+| Languages       | ISO 639-1 language code | none or one or many | Denotes the writing language(s) of the manuscript item |
+| Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties associated with the manuscript item. |
+| LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the manuscript item. |
+| Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the manuscript item. |
+| LocationsAbroad | [`locationAbroad`](#locationAbroad) | none or one or many | Denotes a location or locations outside of Ireland associated with the manuscript item. |
+| Collectors      | [`person`](#person) | none or one or many | Denotes a person or persons involved in collecting the manuscript item. |
+| Informants      | [`person`](#person) | none or one or many | Denotes a person or persons from whom the manuscript item was obtained. |
+
 ### `school`
 
 Describes a school that participated in the *Scéim na Scol* folklore collection scheme.
