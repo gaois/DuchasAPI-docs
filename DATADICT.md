@@ -208,7 +208,7 @@ Describes a school that participated in the *Scéim na Scol* folklore collection
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | Name            | string              | one                 | The school name.          |
-| RollNumber      | string              | none or one         | The school's roll number. |
+| RollNumber      | string              | none or one         | The school's Department of Education roll number. |
 | Locations       | [`locationIreland`](#locationIreland) | none or one or many | A location or locations associated with the school. |
 
 ## The Photographic Collection (CBÉG)
