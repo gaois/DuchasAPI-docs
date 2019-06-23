@@ -13,6 +13,10 @@ This document describes the data structure of the collections made available via
   - [`item`](#main-manuscript-item)
   - [Main Manuscript values](#main-manuscript-values)
 - [The Schools' Collection](#the-schools-collection-cbés)
+  - [`volume`](#schools-collection-volume)
+  - [`page`](#schools-collection-page)
+  - [`part`](#schools-collection-part)
+  - [`item`](#schools-collection-item)
 - [The Photographic Collection](#the-photographic-collection-cbég)
   - [`photograph`](#photograph)
   - [`handbookTopic`](#handbookTopic)
@@ -159,6 +163,19 @@ A `part` entity represents a distinct section within a manuscript volume and may
 An `item` entity represents a discrete work, such as a story. It is consonant with the TEI [msItem](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mscoit) element. Notice that mapping between items and pages is many-to-many: an item can span over several pages and a page can accommodate several items. An `item` entity also contains detailed data about the people who were involved in its writing, the subject to which it pertains and other data. In the previous Schools' Collection XML-based API manuscript items were referred to as **stories**.
 
 Queries to the Schools' Collection may return one or more `volume` objects. The information below describes the properties of this object type.
+
+### Schools' Collection `volume`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The volume identifier (unique within collection). |
+| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation.  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
+| VolumeNumber    | string              | none or one         | The volume's NFC archival reference number. |
+| Status          | integer             | one                 | Specifies the entry's editorial [status](#status). **(Privileged)**  |
+| Type            | string              | one                 | Distinguishes the particular type of School's Collection volume, e.g. volume, copybook, etc. |
+| Pages           | [`page`](#main-manuscript-page)     | one                 | Metadata describing the volume's physical pages. |
+| Parts           | [`part`](#main-manuscript-part)     | none or one         | Metadata describing the logical parts which subdivide the manuscript volume and their contents. |
 
 ## The Photographic Collection (CBÉG)
 
