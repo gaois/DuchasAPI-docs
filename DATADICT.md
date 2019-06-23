@@ -12,6 +12,7 @@ This document describes the data structure of the collections made available via
   - [`part`](#main-manuscript-part)
   - [`item`](#main-manuscript-item)
   - [Main Manuscript values](#main-manuscript-values)
+- [The Schools' Collection](#the-schools-collection-cbés)
 - [The Photographic Collection](#the-photographic-collection-cbég)
   - [`photograph`](#photograph)
   - [`handbookTopic`](#handbookTopic)
@@ -148,6 +149,16 @@ This section describes values particular to properties of the Main Manuscript `v
 | LÁMH            | Handwritten text.         |
 | CLÓ             | Typewritten text.         |
 | LÍN             | Drawing.                  |
+
+## The Schools' Collection (CBÉS)
+
+The Schools' Collection consists of stories and accounts which have been physically bound into volumes. Each volume is represented in the data set by a `volume` entity, and each page by a `page` entity. Each `page` entity also contains a reference that identifies the scanned image of the page. Together, `volume` and `page` entities represent the collection’s **physical structure**. In parallel to the physical structure, a **logical structure** exists which annotates and indexes the physical structure. It consists of `part` and `item` entities. 
+
+A `part` entity represents a distinct section within a manuscript volume and may have originally been physically separate from the other contents of the volume. It is consonant with the [`msPart`](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mspt) element as specified in the Text Encoding Initiative (TEI) P5 Guidelines. It the Schools' Collection a `part` contains material collected by a single school. In the case of schools where multiple teachers and/or class groups took part in *Scéim na Scol* folklore collection scheme there may be multiple `part` entities associated with that school. In the previous Schools' Collection XML-based API manuscript parts were referred to as **chapters**.
+
+An `item` entity represents a discrete work, such as a story. It is consonant with the TEI [msItem](https://www.tei-c.org/release/doc/tei-p5-doc/en/html/MS.html#mscoit) element. Notice that mapping between items and pages is many-to-many: an item can span over several pages and a page can accommodate several items. An `item` entity also contains detailed data about the people who were involved in its writing, the subject to which it pertains and other data. n the previous Schools' Collection XML-based API manuscript items were referred to as **stories**.
+
+Queries to the Schools' Collection may return one or more `volume` objects. The information below describes the properties of this object type.
 
 ## The Photographic Collection (CBÉG)
 
