@@ -17,6 +17,7 @@ This document describes the data structure of the collections made available via
   - [`page`](#schools-collection-page)
   - [`part`](#schools-collection-part)
   - [`item`](#schools-collection-item)
+  - [`school`](#school)
 - [The Photographic Collection](#the-photographic-collection-cbég)
   - [`photograph`](#photograph)
   - [`handbookTopic`](#handbookTopic)
@@ -199,6 +200,16 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | School          | [`school`](#school) | none or one         | Metadata that describe the school associated with the manuscript part. |
 | Teachers      | [`person`](#person) | none or one or many | Denotes a school teacher or teachers involved in collating the material within the manuscript part. |
 | Items           | [`item`](#item)     | none or one or many | Metadata describing the discrete items which compose the manuscript part. |
+
+### `school`
+
+Describes a school that participated in the *Scéim na Scol* folklore collection scheme.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| Name            | string              | one                 | The school name.          |
+| RollNumber      | string              | none or one         | The school's roll number. |
+| Locations       | [`locationIreland`](#locationIreland) | none or one or many | A location or locations associated with the school. |
 
 ## The Photographic Collection (CBÉG)
 
