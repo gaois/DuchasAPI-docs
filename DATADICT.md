@@ -177,6 +177,16 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | Pages           | [`page`](#main-manuscript-page)     | one                 | Metadata describing the volume's physical pages. |
 | Parts           | [`part`](#main-manuscript-part)     | none or one         | Metadata describing the logical parts which subdivide the manuscript volume and their contents. |
 
+### Schools' Collection `page`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The page identifier (unique within collection). |
+| PageNumber      | string              | one                 | The page number.     |
+| ListingOrder    | string              | one                 | The listing order of the page within the volume. This is generally, but not always, identical to the page number as written on the page itself. |
+| ImageFileName   | string              | one                 | The file name that identifies the scanned image of the page. |
+| Sensitive       | boolean             | one                 | If true the page contains sensitive content and should not be made publicly available. **(Privileged)** |
+
 ## The Photographic Collection (CBÉG)
 
 Queries to the Photographic Collection may return one or more `photograph` objects. The information below describes the properties of this object type.
