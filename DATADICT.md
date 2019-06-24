@@ -18,6 +18,7 @@ This document describes the data structure of the collections made available via
   - [`part`](#schools-collection-part)
   - [`item`](#schools-collection-item)
   - [`school`](#school)
+  - [`person`](#schools-collection-person)
 - [The Photographic Collection](#the-photographic-collection-cbég)
   - [`photograph`](#photograph)
   - [`handbookTopic`](#handbookTopic)
@@ -504,7 +505,7 @@ This property indicates the accuracy of the date information using standard [MOD
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | ID              | integer             | one                 | The transcriber's unique identifier. |
-| Name            | string              | none or one         | The transcriber name. If the transcriber sebequently deleted their account this value will be null. |
+| Name            | string              | none or one         | The transcriber name. If the transcriber sebequently deleted their account this value is null. |
 
 ## Common values
 
