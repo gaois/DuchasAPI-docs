@@ -321,6 +321,32 @@ Queries to the Photographic Collection may return one or more `photograph` objec
 | ArchivedInfo    | [`archivedInfo`](#archivedInfo)      | none or one         | Comprises the archival information imported from NFC's previous data management system at the outset of the digitization process. |
 | Digitization    | [`digitization`](#digitization)      | none or one         | Metadata associated with the digitization of the archive image or images associated with this entry. |
 
+#### `copyright`
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+| CBE             | NFC is the copyright holder. |
+| OTH             | Copyright is held by an entity other than NFC. |
+| NOT             | Copyright does not apply.  |
+| UNK             | Copyright status is unknown. |
+
+#### `condition`
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+| 0               | Poor condition.           |
+| 1               | Medium condition.         |
+| 2               | Good condition.           |
+
+#### `archivedDescriptionStatus`
+
+Specifies the publication status of the `archivedDescription` field.
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+| EDIT            | The `ArchivedDescription` field is not suitable for publication. |
+| PUB             | The `ArchivedDescription` field is suitable for publication. |
+
 ### `handbookTopic`
 
 Denotes a subject heading (topic) in Seán Ó Súilleabháin's [*A Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg). It has been archival practice in NFC to associate photographs in CBÉG with a *Handbook* topic and a *Handbook* topic ID constitutes the first segment of the photograph `ReferenceNumber`.
@@ -379,36 +405,6 @@ As part of the Dúchas project photograph metadata from the NFC's previous data 
 | FileSize        | string              | one                 | The file size of the digitized image. |
 | ComputerOS      | string              | one                 | The operating system used. |
 | Storage         | string              | one                 | Image storage details. |
-
-### `photograph` values
-
-This section describes values particular to properties of the `photograph` object.
-
-#### `copyright`
-
-| Value           | Description               |
-| :-------------- | :------------------------ |
-| CBE             | NFC is the copyright holder. |
-| OTH             | Copyright is held by an entity other than NFC. |
-| NOT             | Copyright does not apply.  |
-| UNK             | Copyright status is unknown. |
-
-#### `condition`
-
-| Value           | Description               |
-| :-------------- | :------------------------ |
-| 0               | Poor condition.           |
-| 1               | Medium condition.         |
-| 2               | Good condition.           |
-
-#### `archivedDescriptionStatus`
-
-Specifies the publication status of the `archivedDescription` field.
-
-| Value           | Description               |
-| :-------------- | :------------------------ |
-| EDIT            | The `ArchivedDescription` field is not suitable for publication. |
-| PUB             | The `ArchivedDescription` field is suitable for publication. |
 
 ## The Persons Database (CBÉD)
 
