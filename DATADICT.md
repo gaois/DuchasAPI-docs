@@ -255,11 +255,9 @@ Describes a school that participated in the *Scéim na Scol* folklore collection
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | Age             | integer             | one                 | The person's age in years, if known. |
 | Qualifier       | string              | none or one         | Additional information regarding the person's age. |
-| RangeMax        | integer             | none or one         | |
+| RangeMax        | integer             | none or one         | If not null this value specifies the person's maximum potential age, i.e. if the person's `age` is 50 and their `RangeMax` value is 60 their age is in the range of 50-60 years. |
 
 #### `Qualifier`
-
-This property indicates the accuracy of the date information using standard [MODS](http://www.loc.gov/standards/mods/) date qualifier vocabulary.
 
 | Value           | Description               |
 | :-------------- | :------------------------ |
