@@ -17,9 +17,10 @@ This document describes the data structure of the collections made available via
   - [`page`](#schools-collection-page)
   - [`part`](#schools-collection-part)
   - [`item`](#schools-collection-item)
-  - [`school`](#school)
   - [`person`](#schools-collection-person)
   - [`age`](#schools-collection-age)
+  - [`school`](#school)
+  - [`topic`](#schools-collection-topic)
 - [The Photographic Collection](#the-photographic-collection-cbég)
   - [`photograph`](#photograph)
   - [`handbookTopic`](#handbookTopic)
@@ -221,21 +222,12 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | Pages           | integer             | one or many         | Specifies the page identifier(s) associated with the item. |
 | FirstPageID     | integer             | one                 | Identifies the initial page associated with the item. Note that if the item does not span more than one page this will have the same value as the `LastPageID` |
 | LastPageID      | integer             | one                 | Identifies the final page associated with the item. Note that if the item does not span more than one page this will have the same value as the `FirstPageID` |
+| Topics          | [`topic`](#schools-collection-topic) | none or one    | |
 | Languages       | ISO 639-1 language code | none or one or many | Denotes the writing language(s) of the manuscript item |
 | Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties associated with the manuscript item other than those associated with the school or the informant's place of residence. |
 | LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the manuscript item other than those associated with the school or the informant's place of residence. |
 | Collectors      | [`person`](#schools-collection-person) | none or one or many | Denotes a person or persons involved in collecting the manuscript item. |
 | Informants      | [`person`](#schools-collection-person) | none or one or many | Denotes a person or persons from whom the manuscript item was obtained. |
-
-### `school`
-
-Describes a school that participated in the *Scéim na Scol* folklore collection scheme.
-
-| Property name   | Type                | Cardinality         | Description               |
-| :-------------- | :------------------ | :------------------ | :------------------------ |
-| Name            | string              | one                 | The school name.          |
-| RollNumber      | string              | none or one         | The school's Department of Education roll number. |
-| Locations       | [`locationIreland`](#locationIreland) | none or one or many | A location or locations associated with the school. |
 
 ### Schools' Collection `person`
 
@@ -268,6 +260,21 @@ Due to the scope of the Schools' Collection digitisation project it has not yet 
 | Age             | integer             | one                 | The person's age in years, if known. |
 | Qualifier       | string              | none or one         | Additional information regarding the person's age. |
 | RangeMax        | integer             | none or one         | If not null this value specifies the person's maximum potential age, i.e. if the person's `age` is 50 and their `RangeMax` value is 60 their age is in the range of 50-60 years. |
+
+### `school`
+
+Describes a school that participated in the *Scéim na Scol* folklore collection scheme.
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| Name            | string              | one                 | The school name.          |
+| RollNumber      | string              | none or one         | The school's Department of Education roll number. |
+| Locations       | [`locationIreland`](#locationIreland) | none or one or many | A location or locations associated with the school. |
+
+### Schools' Collection `topic`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
 
 #### `Qualifier`
 
