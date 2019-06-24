@@ -19,6 +19,7 @@ This document describes the data structure of the collections made available via
   - [`item`](#schools-collection-item)
   - [`school`](#school)
   - [`person`](#schools-collection-person)
+  - [`age`](#schools-collection-age)
 - [The Photographic Collection](#the-photographic-collection-cbég)
   - [`photograph`](#photograph)
   - [`handbookTopic`](#handbookTopic)
@@ -235,6 +236,35 @@ Describes a school that participated in the *Scéim na Scol* folklore collection
 | Name            | string              | one                 | The school name.          |
 | RollNumber      | string              | none or one         | The school's Department of Education roll number. |
 | Locations       | [`locationIreland`](#locationIreland) | none or one or many | A location or locations associated with the school. |
+
+### Schools' Collection `person`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The person identifier.    |
+| Names           | [`name`](#name)     | one or many         | Names associated with the person.  |
+| Gender          | string              | none or one         | The person's gender (`f` or `m`). |
+| Age             | [`age`](#schools-collection-age) | none or one  | Metadata regarding a person's age. |
+| AddressesIreland | [`locationIreland`](#locationIreland) | none or one or many | Denotes a location or locations in Ireland given as the person's address. |
+| Occupations     | string              | none or one or many | Occupations associated with the person. |
+| CollectorRelationship | string          | none or one         | Expresses the relationship an informant has to the person collecting the folklore. |
+
+### Schools' Collection `age`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| Age             | integer             | one                 | The person's age in years, if known. |
+| Qualifier       | string              | none or one         | Additional information regarding the person's age. |
+| RangeMax        | integer             | none or one         | |
+
+#### `Qualifier`
+
+This property indicates the accuracy of the date information using standard [MODS](http://www.loc.gov/standards/mods/) date qualifier vocabulary.
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+| APPROX          | The age is approximate.   |
+| OVER            | The person's actual age is higher than `age` value, e.g. the person is 'over 60'. |
 
 ## The Photographic Collection (CBÉG)
 
