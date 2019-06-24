@@ -174,9 +174,17 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | VolumeNumber    | string              | none or one         | The volume's NFC archival reference number. |
 | Status          | integer             | one                 | Specifies the entry's editorial [status](#status). **(Privileged)**  |
-| Type            | string              | one                 | Distinguishes the particular type of School's Collection volume, e.g. volume, copybook, etc. |
+| Type            | string              | one                 | Distinguishes the particular type of School's Collection volume [type](#type). |
 | Pages           | [`page`](#main-manuscript-page)     | one                 | Metadata describing the volume's physical pages. |
 | Parts           | [`part`](#main-manuscript-part)     | none or one         | Metadata describing the logical parts which subdivide the manuscript volume and their contents. |
+
+#### `type`
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+| bound-volume    | The volume is composed of originally separate parts that were bound together (?). |
+| copybook-package | The volume is composed of the original copybooks the children used to write down the material. |
+| volume          | Typical volume.            |
 
 ### Schools' Collection `page`
 
