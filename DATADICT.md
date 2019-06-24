@@ -280,7 +280,7 @@ Describes a school that participated in the *Scéim na Scol* folklore collection
 
 ### Schools' Collection `topic`
 
-Represents a topic taken from the [Schools’ Collection Subject List](https://www.duchas.ie/en/tpc/cbes). Note that topics are hierarchical and a given topic will contain data pertaining to its antecedent topic categories.
+Represents a topic taken from the [Schools’ Collection Subject List](https://www.duchas.ie/en/tpc/cbes). Note that topics are hierarchical and a given topic will contain data pertaining to its antecedent topic categories where applicable.
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
