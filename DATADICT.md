@@ -189,7 +189,7 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | ListingOrder    | string              | one                 | The listing order of the page within the volume. This is generally, but not always, identical to the page number as written on the page itself. |
 | ImageFileName   | string              | one                 | The file name that identifies the scanned image of the page. |
 | Sensitive       | boolean             | one                 | If true the page contains sensitive content and should not be made publicly available. **(Privileged)** |
-| Transcripts     | [`transcript`](#transcript) | none or one or many | One or more transcripts of material on the manuscript page. |
+| Transcripts     | [`transcript`](#transcript) | none or one or many | One or more transcripts of material on the manuscript page contributed by members of the [Meitheal Dúchas.ie](https://www.duchas.ie/en/meitheal/) community transcription project. |
 
 ### Schools' Collection `part`
 
