@@ -201,10 +201,12 @@ Use these query parameters to filter the results returned by the API.
 | `Copyright`   | string        | Filter by copyright holder (e.g. CBE, UNK). |
 | `Condition`   | integer       | Filter by physical condition (0-3). |
 | `HandbookTopic` | string        | Filter by [*A Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg) subject code (e.g. B005). |
+| `PersonID`    | integer       | Filter by person's CBÉD identifer. |
 | `PhotographerID` | integer       | Filter by photographer's CBÉD identifer. |
 | `RelevantPersonID` | integer       | Filter by person's CBÉD identifer. |
-| `Country`     | ISO 3166 country code*       | Filter by country ISO code (e.g. DE, US, GB-ENG). |
-| `LogainmID`   | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `CountyID`    | integer       | Filter by county using [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `PlaceID`     | integer       | Filter by place using [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `Country`     | ISO 3166 country code* | Filter by country ISO code (e.g. DE, US, GB-ENG). |
 | `GeoNameID`   | integer       | Filter by [GeoName](https://www.geonames.org) placename identifer.  |
 | `DateFrom`    | integer**     | Retrieve records associated with this year or later. |
 | `DateTo`      | integer**     | Retrieve records associated with this year or earlier. |
