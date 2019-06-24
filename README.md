@@ -169,6 +169,29 @@ Use these query parameters to filter the results returned by the API.
 
 **\*\*Note:** The `DateFrom` and `DateTo` parameters currently only accept years in `YYYY` format.
 
+#### The Schools' Collection (CBÉS)
+
+| Name          | Type          | Description    |
+| :------------ | :------------ | :------------- |
+| `Status`      | integer       | Filter by editorial status (0-4). **(Privileged)** |
+| `VolumeNumber` | string        | Filter by manuscript volume archival reference (e.g. '0154') |
+| `VolumeID`    | integer       | Filter by manuscript volume identifer. |
+| `PageID`      | integer       | Filter by manuscript page identifer. |
+| `PartID`      | integer       | Filter by manuscript part identifer. |
+| `ItemID`      | integer       | Filter by manuscript item identifer. |
+| `CollectorID` | integer       | Filter by collector's CBÉD identifier. |
+| `InformantID` | integer       | Filter by informant's CBÉD identifier. |
+| `PersonID` | integer       | Filter by person's CBÉD identifer. This filter encompasses all person types (i.e. collector, informant, relevant person). |
+| `LogainmID`   | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `PartCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part created before a given date in `YYYY-MM-DD` format. |
+| `PartCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part created after a given date in `YYYY-MM-DD` format. |
+| `PartModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated before a given date in `YYYY-MM-DD` format. |
+| `PartModifiedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated after a given date in `YYYY-MM-DD` format. |
+| `ItemCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript item created before a given date in `YYYY-MM-DD` format. |
+| `ItemCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript item created after a given date in `YYYY-MM-DD` format. |
+| `ItemModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript item last updated before a given date in `YYYY-MM-DD` format. |
+| `ItemModifiedSince` | ISO 8601 datetime | Retrieve records containing a manuscript item last updated after a given date in `YYYY-MM-DD` format. |
+
 #### The Photographic Collection (CBÉG)
 
 | Name          | Type          | Description    |
