@@ -11,7 +11,7 @@ This document describes the data structure of the collections made available via
   - [`page`](#main-manuscript-page)
   - [`part`](#main-manuscript-part)
   - [`item`](#main-manuscript-item)
-  - [Main Manuscript values](#main-manuscript-values)
+  - [`manuscriptItemLink`](#manuscriptItemLink)
 - [The Schools' Collection](#the-schools-collection-cbés)
   - [`volume`](#schools-collection-volume)
   - [`page`](#schools-collection-page)
@@ -128,21 +128,6 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | ExtraInfoEN     | string              | none or one         | Free-text remarks on the manuscript item (in English). Authored as part of the Dúchas project. |
 | ExtraInfoGA     | string              | none or one         | Free-text remarks on the manuscript item (in Irish). Authored as part of the Dúchas project. |
 
-### `manuscriptItemLink`
-
-Denotes a manuscript item which is directly connected to another manuscript item. Typically the items are linked by a sequential relationship (e.g. the other items precede or follow the current item in a series of continuing or related stories).
-
-| Property name   | Type                | Cardinality         | Description               |
-| :-------------- | :------------------ | :------------------ | :------------------------ |
-| PartID          | integer             | one                 | The `part` identifier associated with the linked manuscript item. |
-| PageID          | integer             | one                 | The `page` identifier associated with the initial page of the linked manuscript item. |
-| ItemID          | integer             | one                 | The identifer of the linked manuscript `item`. |
-| Sequence        | string              | none or one         | Describes the linked item's sequential relationship (`PREV` if the linked item precedes the current item in sequence; `NEXT` if the linked item follows). |
-
-### Main Manuscript values
-
-This section describes values particular to properties of the Main Manuscript `volume` object and its child objects.
-
 #### `contentType`
 
 | Value           | Description               |
@@ -159,6 +144,17 @@ This section describes values particular to properties of the Main Manuscript `v
 | LÁMH            | Handwritten text.         |
 | CLÓ             | Typewritten text.         |
 | LÍN             | Drawing.                  |
+
+### `manuscriptItemLink`
+
+Denotes a manuscript item which is directly connected to another manuscript item. Typically the items are linked by a sequential relationship (e.g. the other items precede or follow the current item in a series of continuing or related stories).
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+| PartID          | integer             | one                 | The `part` identifier associated with the linked manuscript item. |
+| PageID          | integer             | one                 | The `page` identifier associated with the initial page of the linked manuscript item. |
+| ItemID          | integer             | one                 | The identifer of the linked manuscript `item`. |
+| Sequence        | string              | none or one         | Describes the linked item's sequential relationship (`PREV` if the linked item precedes the current item in sequence; `NEXT` if the linked item follows). |
 
 ## The Schools' Collection (CBÉS)
 
