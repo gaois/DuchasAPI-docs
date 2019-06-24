@@ -489,6 +489,8 @@ This property indicates the accuracy of the date information using standard [MOD
 
 ### `transcript`
 
+A transcript of material on a manuscript page contributed by members of the [Meitheal Dúchas.ie](https://www.duchas.ie/en/meitheal/) community transcription project. The transcribed material is provided subject to a [CC-BY-NC 4.0](https://creativecommons.org/licenses/by-nc/4.0/) licence.
+
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | ID              | integer             | one                 | The transcript's unique identifier. |
