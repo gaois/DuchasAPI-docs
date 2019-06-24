@@ -494,8 +494,8 @@ This property indicates the accuracy of the date information using standard [MOD
 | DateCreated     | ISO 8601 datetime   | one                 | The date and time of transcript creation.  |
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to transcript.  |
 | ItemID          | integer             | one                 | Identifies the manuscript item that is transribed. |
-| Approved        | boolean             | one                 | Denotes whether the transcription has been approved. **(Privileged)** |
-| Moderated       | boolean             | one                 | Denotes whether the transcription has been moderated. **(Privileged)** |
+| Approved        | boolean             | one                 | Denotes whether the transcript has been approved. Transcripts contributed by junior members of Meitheal Dúchas.ie are unapproved until they are reviewed by a member of the Dúchas editorial team. **(Privileged)** |
+| Moderated       | boolean             | one                 | Denotes whether the transcript has been moderated by a member of the Dúchas editorial team. In such cases the transcript is not made publicly available. **(Privileged)** |
 | Text            | string              | one                 | The transcript text. |
 | Transcribers    | [`transcriber`](#transcriber) | none or one or many | Metadata regarding the volunteers who contributed to the transcript. This property may be empty if the transcript was created by anonymous transcribers. |
 
@@ -530,4 +530,3 @@ Specifies the publication status of the `extraInfo` field.
 | :-------------- | :------------------------ |
 | EDIT            | The `extraInfo` field, if present, is not suitable for publication. |
 | PUB             | The `extraInfo` field, if present, is suitable for publication. |
-
