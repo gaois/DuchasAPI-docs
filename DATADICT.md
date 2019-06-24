@@ -222,7 +222,7 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | Pages           | integer             | one or many         | Specifies the page identifier(s) associated with the item. |
 | FirstPageID     | integer             | one                 | Identifies the initial page associated with the item. Note that if the item does not span more than one page this will have the same value as the `LastPageID` |
 | LastPageID      | integer             | one                 | Identifies the final page associated with the item. Note that if the item does not span more than one page this will have the same value as the `FirstPageID` |
-| Topics          | [`topic`](#schools-collection-topic) | none or one    | |
+| Topics          | [`topic`](#schools-collection-topic) | none or one    | A topic or topics from the [Schools’ Collection Subject List](https://www.duchas.ie/en/tpc/cbes) associated with this item.  |
 | Languages       | ISO 639-1 language code | none or one or many | Denotes the writing language(s) of the manuscript item |
 | Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties associated with the manuscript item other than those associated with the school or the informant's place of residence. |
 | LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the manuscript item other than those associated with the school or the informant's place of residence. |
@@ -280,8 +280,14 @@ Describes a school that participated in the *Scéim na Scol* folklore collection
 
 ### Schools' Collection `topic`
 
+Represents a topic taken from the [Schools’ Collection Subject List](https://www.duchas.ie/en/tpc/cbes). Note that topics are hierarchical and a given topic will contain data pertaining to its antecedent topic categories.
+
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The topic identifier.     |
+| TitleEN         | string              | one                 | The topic's English-language title. |
+| TitleGA         | string              | one                 | The topic's Irish-language title. |
+| SubTopics       | `topic`             | none or one         | Hierarchical descendants of this topic. |
 
 ## The Photographic Collection (CBÉG)
 
