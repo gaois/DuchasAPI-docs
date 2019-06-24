@@ -263,6 +263,7 @@ Below is a non-exhaustive list of valid API request URLs, provided for demonstra
 - `https://test.duchas.ie/api/v0.5/cbeg/?HandbookTopic=E&PhotographerID=93573082&Digitized=false`
 - `https://test.duchas.ie/api/v0.5/cbeg/?HandbookTopic=B006&LogainmID=100023`
 - `https://test.duchas.ie/api/v0.5/cbeg/?LogainmID=100024&DateFrom=1960&DateTo=1969&DateAccuracy=APPROX`
+- `https://test.duchas.ie/api/v0.5/cbes/?VolumeNumber=0133`
 
 ## HTTP status codes
 
