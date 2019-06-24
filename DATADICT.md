@@ -490,12 +490,21 @@ This property indicates the accuracy of the date information using standard [MOD
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
-
+| ID              | integer             | one                 | The transcript's unique identifier. |
+| DateCreated     | ISO 8601 datetime   | one                 | The date and time of transcript creation.  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to transcript.  |
+| ItemID          | integer             | one                 | Identifies the manuscript item that is transribed. |
+| Approved        | boolean             | one                 | Denotes whether the transcription has been approved. **(Privileged)** |
+| Moderated       | boolean             | one                 | Denotes whether the transcription has been moderated. **(Privileged)** |
+| Text            | string              | one                 | The transcript text. |
+| Transcribers    | [`transcriber`](#transcriber) | none or one or many | Metadata regarding the volunteers who contributed to the transcript. This property may be empty if the transcript was created by anonymous transcribers. |
 
 ### `transcriber`
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
+| ID              | integer             | one                 | The transcriber's unique identifier. |
+| Name            | string              | none or one         | The transcriber name. This property may be null if the transcriber sebequently deleted their account. |
 
 ## Common values
 
