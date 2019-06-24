@@ -225,8 +225,9 @@ Use these query parameters to filter the results returned by the API.
 | `Gender`      | string        | Filter by person's gender (f, m).  |
 | `AinmID`      | integer       | Filter by [ainm.ie](https://www.ainm.ie) entry ID.  |
 | `ViafID`      | integer       | Filter by [VIAF](https://viaf.org/) entryID.  |
+| `CountyID`    | integer       | Filter by county using [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `PlaceID`     | integer       | Filter by place using [logainm.ie](https://www.logainm.ie) placename identifer.  |
 | `Country`     | ISO 3166 country code* | Filter by country ISO code (e.g. DE, US, GB-ENG). |
-| `LogainmID`   | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename identifer.  |
 | `GeoNameID`   | integer       | Filter by [GeoName](https://www.geonames.org) placename identifer.  |
 | `Occupation`  | string        | Filter by occupation (e.g. IASC, FEIRM). |
 | `BirthDateFrom` | integer**     | Retrieve records associated with this birth year or later. |
