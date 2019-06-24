@@ -249,7 +249,17 @@ Due to the scope of the Schools' Collection digitisation project it has not yet 
 | Age             | [`age`](#schools-collection-age) | none or one  | Metadata regarding a person's age. |
 | AddressesIreland | [`locationIreland`](#locationIreland) | none or one or many | Denotes a location or locations in Ireland given as the person's address. |
 | Occupations     | string              | none or one or many | Occupations associated with the person. These occupations are not linked to a controlled vocabulary: they record the person's occupations as they were written down and may be in English or Irish. |
-| CollectorRelationship | string          | none or one         | Expresses the relationship an informant has to the person collecting the folklore. |
+| CollectorRelationship | string          | none or one         | If the person in question is an informant this property expresses the relationship (familial or otherwise) the informant has with respect to the person collecting the material. |
+
+#### `CollectorRelationship`
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+| GRPAR           | The individual is the collector's grandparent.   |
+| PAR             | The individual is the collector's parent. |
+| REL             | The individual is related to the collector (the relationship is unspecified). |
+| UNK             | The relationship is unknown. |
+| UNREL           | The individual is unrelated to the collector. |
 
 ### Schools' Collection `age`
 
