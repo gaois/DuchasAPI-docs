@@ -224,8 +224,8 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | Languages       | ISO 639-1 language code | none or one or many | Denotes the writing language(s) of the manuscript item |
 | Counties        | [`county`](#county) | none or one or many | Denotes the Irish administrative county or counties associated with the manuscript item other than those associated with the school or the informant's place of residence. |
 | LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the manuscript item other than those associated with the school or the informant's place of residence. |
-| Collectors      | [`person`](#person) | none or one or many | Denotes a person or persons involved in collecting the manuscript item. |
-| Informants      | [`person`](#person) | none or one or many | Denotes a person or persons from whom the manuscript item was obtained. |
+| Collectors      | [`person`](#schools-collection-person) | none or one or many | Denotes a person or persons involved in collecting the manuscript item. |
+| Informants      | [`person`](#schools-collection-person) | none or one or many | Denotes a person or persons from whom the manuscript item was obtained. |
 
 ### `school`
 
