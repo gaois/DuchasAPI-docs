@@ -118,7 +118,7 @@ The resources provided by the API are accessed via unique paths appended to the 
 | GET         | `/api/v0.5/cbeg/{id}`         | CBÉG           | Metadata associated with an individual photograph. |
 | GET         | `/api/v0.5/cbeg/topics/handbook`   | CBÉG           | Reference list of subject headings (topics) in Seán Ó Súilleabháin's [*An Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg). |
 | GET         | `/api/v0.5/cbes`              | CBÉS           | List of manuscript volumes and associated metadata. |
-| GET         | `/api/v0.5/cbes/topics`       | CBÉS           | Reference list of topics of the [Schools' Collection Subject List](https://www.duchas.ie/en/tpc/cbes).
+| GET         | `/api/v0.5/cbes/topics`       | CBÉS           | Reference list of topics from the [Schools' Collection Subject List](https://www.duchas.ie/en/tpc/cbes).
 | GET         | `/api/v0.5/counties`          | N/A            | Reference list of metadata associated with Irish counties. |
 | GET         | `/api/v0.5/countries`         | N/A            | Reference list of metadata associated with countries. |
 
