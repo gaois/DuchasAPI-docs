@@ -261,6 +261,13 @@ Due to the scope of the Schools' Collection digitisation project it has not yet 
 | Qualifier       | string              | none or one         | Additional information regarding the person's age. |
 | RangeMax        | integer             | none or one         | If not null this value specifies the person's maximum potential age, i.e. if the person's `age` is 50 and their `RangeMax` value is 60 their age is in the range of 50-60 years. |
 
+#### `Qualifier`
+
+| Value           | Description               |
+| :-------------- | :------------------------ |
+| APPROX          | The age is approximate.   |
+| OVER            | The person's actual age is higher than `age` value, e.g. the person is 'over 60'. |
+
 ### `school`
 
 Describes a school that participated in the *Scéim na Scol* folklore collection scheme.
@@ -275,13 +282,6 @@ Describes a school that participated in the *Scéim na Scol* folklore collection
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
-
-#### `Qualifier`
-
-| Value           | Description               |
-| :-------------- | :------------------------ |
-| APPROX          | The age is approximate.   |
-| OVER            | The person's actual age is higher than `age` value, e.g. the person is 'over 60'. |
 
 ## The Photographic Collection (CBÉG)
 
