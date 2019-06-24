@@ -104,7 +104,7 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | EditorsPick     | ISO 8601 datetime   | none or one         | Denotes the date on which the item was featured as an [editors' pick](https://www.duchas.ie/en/ftr/) on the dúchas.ie website, if featured. |
 | Sensitive       | boolean             | one                 | If true the item contains sensitive content and should not be made publicly available. **(Privileged)** |
-| ListingOrder    | string              | one                 | The listing order of the item within its parent manuscript part. This is generally, but not always, consistent with the order of the physical pages in the volume. |
+| ListingOrder    | string              | none or one         | The listing order of the item within its parent manuscript part. The order of items is determined, in the first instance, by their initial page number however the `listingOrder` property may be used, for example, to represent the order of two or more items on a single page. |
 | Date            | [`date`](#date)     | none or one         | Metadata associated with the date or period of time, if known, during which the manuscript item was collected. |
 | Title           | string              | none or one         | The title of the item, if one is given. |
 | Extract         | string              | none or one         | A brief extract from the text of the item. Typically provided if no `title` property can be specified. |
@@ -219,7 +219,7 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | EditorsPick     | ISO 8601 datetime   | none or one         | Denotes the date on which the item was featured as an [editors' pick](https://www.duchas.ie/en/ftr/) on the dúchas.ie website, if featured. |
 | Sensitive       | boolean             | one                 | If true the item contains sensitive content and should not be made publicly available. **(Privileged)** |
-| ListingOrder    | string              | one                 | The listing order of the item within its parent manuscript part. This is generally, but not always, consistent with the order of the physical pages in the volume. |
+| ListingOrder    | string              | none or one         | The listing order of the item within its parent manuscript part. The order of items is determined, in the first instance, by their initial page number however the `listingOrder` property may be used, for example, to represent the order of two or more items on a single page. |
 | Title           | string              | none or one         | The title of the item, if one is given. |
 | Extract         | string              | none or one         | A brief extract from the text of the item. Typically provided if no `title` property can be specified. |
 | Pages           | integer             | one or many         | Specifies the page identifier(s) associated with the item. |
