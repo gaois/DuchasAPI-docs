@@ -239,6 +239,8 @@ Describes a school that participated in the *Scéim na Scol* folklore collection
 
 ### Schools' Collection `person`
 
+Due to the scope of the Schools' Collection digitisation project it has not yet been feasible to extract a normalised set of personal metadata. Instead, the initial phases of the project sought to capture information about the persons referred to within the collection 'as is'. Thus, the same individual may be referenced by more than one `person` entity. 
+
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | ID              | integer             | one                 | The person identifier.    |
@@ -246,7 +248,7 @@ Describes a school that participated in the *Scéim na Scol* folklore collection
 | Gender          | string              | none or one         | The person's gender (`f` or `m`). |
 | Age             | [`age`](#schools-collection-age) | none or one  | Metadata regarding a person's age. |
 | AddressesIreland | [`locationIreland`](#locationIreland) | none or one or many | Denotes a location or locations in Ireland given as the person's address. |
-| Occupations     | string              | none or one or many | Occupations associated with the person. |
+| Occupations     | string              | none or one or many | Occupations associated with the person. These occupations are not linked to a controlled vocabulary: they record the person's occupations as they were written down and may be in English or Irish. |
 | CollectorRelationship | string          | none or one         | Expresses the relationship an informant has to the person collecting the folklore. |
 
 ### Schools' Collection `age`
