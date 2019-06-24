@@ -35,6 +35,8 @@ This document describes the data structure of the collections made available via
   - [`date`](#date)
   - [`locationAbroad`](#locationAbroad)
   - [`locationIreland`](#locationIreland)
+  - [`transcript`](#transcript)
+  - [`transcriber`](#transcriber)
 - [Common values](#common-values)
   - [`status`](#status)
   - [`extraInfoStatus`](#extraInfoStatus)
@@ -187,6 +189,7 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | ListingOrder    | string              | one                 | The listing order of the page within the volume. This is generally, but not always, identical to the page number as written on the page itself. |
 | ImageFileName   | string              | one                 | The file name that identifies the scanned image of the page. |
 | Sensitive       | boolean             | one                 | If true the page contains sensitive content and should not be made publicly available. **(Privileged)** |
+| Transcripts     | [`transcript`](#transcript) | none or one or many | One or more transcripts of material on the manuscript page. |
 
 ### Schools' Collection `part`
 
@@ -198,7 +201,7 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | ListingOrder    | string              | one                 | The listing order of the manuscript part within the volume. |
 | TitlePages      | integer             | none or one or more | Denotes title pages associated with the manuscript part. Title pages typically contain information about the participating school and the local area. |
 | School          | [`school`](#school) | none or one         | Metadata that describe the school associated with the manuscript part. |
-| Teachers      | [`person`](#person) | none or one or many | Denotes a school teacher or teachers involved in collating the material within the manuscript part. |
+| Teachers        | [`person`](#person) | none or one or many | Denotes a school teacher or teachers involved in collating the material within the manuscript part. |
 | Items           | [`item`](#item)     | none or one or many | Metadata describing the discrete items which compose the manuscript part. |
 
 ### Schools' Collection `item`
@@ -482,6 +485,17 @@ This property indicates the accuracy of the date information using standard [MOD
 | NameGA          | string              | one                 | The location name (in Irish). |
 | Coordinates     | [`coordinates`](#coordinates) | one                 | The location's geographical coordinates. |
 | Counties        | [`county`](#county) | one or many         | The county or counties in which the location is situated. |
+
+### `transcript`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
+
+
+### `transcriber`
+
+| Property name   | Type                | Cardinality         | Description               |
+| :-------------- | :------------------ | :------------------ | :------------------------ |
 
 ## Common values
 
