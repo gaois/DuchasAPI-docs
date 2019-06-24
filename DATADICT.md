@@ -27,7 +27,6 @@ This document describes the data structure of the collections made available via
   - [`format`](#format)
   - [`archivedInfo`](#archivedInfo)
   - [`digitization`](#digitization)
-  - [`photograph` values](#photograph-values)
 - [The Persons Database](#the-persons-database-cbéd)
   - [`person`](#person)
   - [`name`](#name)
