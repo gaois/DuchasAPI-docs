@@ -203,7 +203,7 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | ListingOrder    | string              | one                 | The listing order of the manuscript part within the volume. |
 | TitlePages      | integer             | none or one or more | Denotes title pages associated with the manuscript part. Title pages typically contain information about the participating school and the local area. |
 | School          | [`school`](#school) | none or one         | Metadata that describe the school associated with the manuscript part. |
-| Teachers        | [`person`](#person) | none or one or many | Denotes a school teacher or teachers involved in collating the material within the manuscript part. |
+| Teachers        | [`person`](#schools-collection-person) | none or one or many | Denotes a school teacher or teachers involved in collating the material within the manuscript part. |
 | Items           | [`item`](#item)     | none or one or many | Metadata describing the discrete items which compose the manuscript part. |
 
 ### Schools' Collection `item`
