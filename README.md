@@ -259,18 +259,18 @@ Below is a non-exhaustive list of valid API request URLs, provided for demonstra
 - `https://test.duchas.ie/api/v0.5/cbed/315678333`
 - `https://test.duchas.ie/api/v0.5/cbed/1740563`
 - `https://test.duchas.ie/api/v0.5/cbed/?ModifiedSince=2019-01-01`
-- `https://test.duchas.ie/api/v0.5/cbed/?LogainmID=35176`
-- `https://test.duchas.ie/api/v0.5/cbed/?Gender=f&LogainmID=100013`
+- `https://test.duchas.ie/api/v0.5/cbed/?PlaceID=35176`
+- `https://test.duchas.ie/api/v0.5/cbed/?Gender=f&CountyID=100013`
 - `https://test.duchas.ie/api/v0.5/cbed/?Country=US`
 - `https://test.duchas.ie/api/v0.5/cbed/?GeoNameID=5128581`
-- `https://test.duchas.ie/api/v0.5/cbed/?LogainmID=130443&Occupation=IASC`
+- `https://test.duchas.ie/api/v0.5/cbed/?PlaceID=130443&Occupation=IASC`
 - `https://test.duchas.ie/api/v0.5/cbeg/974`
-- `https://test.duchas.ie/api/v0.5/cbeg/?LogainmID=100009&ModifiedSince=2018-09-01`
-- `https://test.duchas.ie/api/v0.5/cbeg/?Status=4&LogainmID=100023`
+- `https://test.duchas.ie/api/v0.5/cbeg/?CountyID=100009&ModifiedSince=2018-09-01`
+- `https://test.duchas.ie/api/v0.5/cbeg/?Status=4&CountyID=100023`
 - `https://test.duchas.ie/api/v0.5/cbeg/?Copyright=UNK&PhotographerID=93573082`
 - `https://test.duchas.ie/api/v0.5/cbeg/?HandbookTopic=E&PhotographerID=93573082&Digitized=false`
-- `https://test.duchas.ie/api/v0.5/cbeg/?HandbookTopic=B006&LogainmID=100023`
-- `https://test.duchas.ie/api/v0.5/cbeg/?LogainmID=100024&DateFrom=1960&DateTo=1969&DateAccuracy=APPROX`
+- `https://test.duchas.ie/api/v0.5/cbeg/?HandbookTopic=B006&CountyID=100023`
+- `https://test.duchas.ie/api/v0.5/cbeg/?CountyID=100024&DateFrom=1960&DateTo=1969&DateAccuracy=APPROX`
 - `https://test.duchas.ie/api/v0.5/cbes/?VolumeNumber=0133`
 
 ## HTTP status codes
