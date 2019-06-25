@@ -184,9 +184,11 @@ Use these query parameters to filter the results returned by the API.
 | `SchoolPlaceID`     | integer       | Filter schools (i.e. manucript parts) by place using [logainm.ie](https://www.logainm.ie) placename identifer.  |
 | `CollectorID` | integer       | Filter items by collector's CBÉS identifier. |
 | `InformantID` | integer       | Filter items by informant's CBÉS identifier. |
-| `PersonID` | integer       | Filter items by person's CBÉS identifer. This filter encompasses both collectors and informants. |
+| `PersonID`    | integer       | Filter items by person's CBÉS identifer. This filter encompasses both collectors and informants. |
 | `CountyID`    | integer       | Filter items by county using [logainm.ie](https://www.logainm.ie) placename identifer.  |
 | `PlaceID`     | integer       | Filter items by place using [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `TopicID`     | integer       | Filter items by topic using CBÉS topic identifier. |
+| `Language`    | string        | Filter items by language using ISO 639-1 language code |
 | `PartCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part created before a given date in `YYYY-MM-DD` format. |
 | `PartCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part created after a given date in `YYYY-MM-DD` format. |
 | `PartModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated before a given date in `YYYY-MM-DD` format. |
