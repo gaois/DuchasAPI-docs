@@ -179,10 +179,13 @@ Use these query parameters to filter the results returned by the API.
 | `PageID`      | integer       | Filter by manuscript page identifer. |
 | `PartID`      | integer       | Filter by manuscript part identifer. |
 | `ItemID`      | integer       | Filter by manuscript item identifer. |
-| `CollectorID` | integer       | Filter by collector's CBÉD identifier. |
-| `InformantID` | integer       | Filter by informant's CBÉD identifier. |
-| `PersonID` | integer       | Filter by person's CBÉD identifer. This filter encompasses all person types (i.e. collector, informant, relevant person). |
-| `LogainmID`   | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `SchoolCountyID`    | integer       | Filter schools (i.e. manucript parts) by county using [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `SchoolPlaceID`     | integer       | Filter schools (i.e. manucript parts) by place using [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `CollectorID` | integer       | Filter items by collector's CBÉS identifier. |
+| `InformantID` | integer       | Filter items by informant's CBÉS identifier. |
+| `PersonID` | integer       | Filter items by person's CBÉS identifer. This filter encompasses both collectors and informants. |
+| `CountyID`    | integer       | Filter items by county using [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `PlaceID`     | integer       | Filter items by place using [logainm.ie](https://www.logainm.ie) placename identifer.  |
 | `PartCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part created before a given date in `YYYY-MM-DD` format. |
 | `PartCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part created after a given date in `YYYY-MM-DD` format. |
 | `PartModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated before a given date in `YYYY-MM-DD` format. |
