@@ -3,8 +3,12 @@
 ## General
 
 - Fulltext search
-- Transfer all pages?
 
 ## The Schools' Collection
 
 - First name/surname
+- live transcripts
+
+## Main Manuscript Collection
+
+- restructuring
