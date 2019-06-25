@@ -160,14 +160,11 @@ Use these query parameters to filter the results returned by the API.
 | `DateTo`      | integer**     | Retrieve records associated with this year or earlier. |
 | `DateAccuracy` | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION). |
 | `Language`    | string        | Filter items by language using ISO 639-1 language code |
-| `PartCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part created before a given date in `YYYY-MM-DD` format. |
-| `PartCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part created after a given date in `YYYY-MM-DD` format. |
-| `PartModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated before a given date in `YYYY-MM-DD` format. |
-| `PartModifiedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated after a given date in `YYYY-MM-DD` format. |
-| `ItemCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript item created before a given date in `YYYY-MM-DD` format. |
-| `ItemCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript item created after a given date in `YYYY-MM-DD` format. |
-| `ItemModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript item last updated before a given date in `YYYY-MM-DD` format. |
-| `ItemModifiedSince` | ISO 8601 datetime | Retrieve records containing a manuscript item last updated after a given date in `YYYY-MM-DD` format. |
+| `DateAccuracy` | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION). |
+| `CreatedBefore` | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format. |
+| `CreatedSince` | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format. |
+| `ModifiedBefore` | ISO 8601 datetime | Retrieve records last updated before a given date in `YYYY-MM-DD` format. |
+| `ModifiedSince` | ISO 8601 datetime | Retrieve records last updated after a given date in `YYYY-MM-DD` format. |
 
 **\*Note:** The two-letter country codes accepted by the `Country` parameter conform to the [ISO 3166-1](https://www.iso.org/iso-3166-country-codes.html) standard. However, four additional ISO 3166-2 codes are accepted to facilitate differentiation between England, Northern Ireland, Scotland, and Wales. These are, respectively: `GB-ENG`, `GB-NIR`, `GB-SCT` and `GB-WLS`.
 
@@ -192,14 +189,11 @@ Use these query parameters to filter the results returned by the API.
 | `PlaceID`     | integer       | Filter items by place using [logainm.ie](https://www.logainm.ie) placename identifer.  |
 | `TopicID`     | integer       | Filter items by topic using CBÉS topic identifier. |
 | `Language`    | string        | Filter items by language using ISO 639-1 language code |
-| `PartCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part created before a given date in `YYYY-MM-DD` format. |
-| `PartCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part created after a given date in `YYYY-MM-DD` format. |
-| `PartModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated before a given date in `YYYY-MM-DD` format. |
-| `PartModifiedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated after a given date in `YYYY-MM-DD` format. |
-| `ItemCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript item created before a given date in `YYYY-MM-DD` format. |
-| `ItemCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript item created after a given date in `YYYY-MM-DD` format. |
-| `ItemModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript item last updated before a given date in `YYYY-MM-DD` format. |
-| `ItemModifiedSince` | ISO 8601 datetime | Retrieve records containing a manuscript item last updated after a given date in `YYYY-MM-DD` format. |
+| `DateAccuracy` | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION). |
+| `CreatedBefore` | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format. |
+| `CreatedSince` | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format. |
+| `ModifiedBefore` | ISO 8601 datetime | Retrieve records last updated before a given date in `YYYY-MM-DD` format. This includes new or updated page transcripts. |
+| `ModifiedSince` | ISO 8601 datetime | Retrieve records last updated after a given date in `YYYY-MM-DD` format. This includes new or updated page transcripts. |
 
 #### The Photographic Collection (CBÉG)
 
