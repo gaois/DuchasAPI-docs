@@ -66,7 +66,7 @@ Clients requesting a resource via the API are required to authenticate their ide
 
 Visit the Gaois Developer Hub at [gaois.ie](https://www.gaois.ie/). Log in or register to create an account and you will be able to access your unique API key.
 
-**Note:** This service not yet available and is scheduled for delivery in May 2019. In the meantime, please contact us at [eolas@duchas.ie](mailto:eolas@duchas.ie) to request or reset your API key.
+**Note:** This registration service is coming soon. In the meantime, please contact us at [eolas@duchas.ie](mailto:eolas@duchas.ie) to request or reset your API key.
 
 ### How to pass your API key
 
@@ -117,14 +117,16 @@ The resources provided by the API are accessed via unique paths appended to the 
 | GET         | `/api/v0.5/cbeg`              | CBÉG           | List of photographs and associated metadata.** |
 | GET         | `/api/v0.5/cbeg/{id}`         | CBÉG           | Metadata associated with an individual photograph. |
 | GET         | `/api/v0.5/cbeg/topics/handbook`   | CBÉG           | Reference list of subject headings (topics) in Seán Ó Súilleabháin's [*An Handbook of Irish Folklore*](https://www.duchas.ie/en/tpc/cbeg). |
-| GET         | `/api/v0.5/cbes`              | CBÉS           | List of manuscript volumes and associated metadata. |
+| GET         | `/api/v0.5/cbes`              | CBÉS           | List of manuscript volumes and associated metadata.*** |
 | GET         | `/api/v0.5/cbes/topics`       | CBÉS           | Reference list of topics from the [Schools' Collection Subject List](https://www.duchas.ie/en/tpc/cbes).
 | GET         | `/api/v0.5/counties`          | N/A            | Reference list of metadata associated with Irish counties. |
 | GET         | `/api/v0.5/countries`         | N/A            | Reference list of metadata associated with countries. |
 
-**\*Note:** Requests to the `/api/v0.5/cbe` endpoint must be filtered by at least one of the following parameters: `VolumeID`, `PageID`, `PartID`, `ItemID`,`LogainmID`, `GeoNameID`, `Country`, `CollectorID`, `InformantID`, or `PersonID`.
+**\*Note:** Requests to the `/api/v0.5/cbe` endpoint must be filtered by at least one of the following parameters: `VolumeID`, `VolumeNumber`, `PageID`, `PartID`, `ItemID`,`CountyID`, `PlaceID`, `Country`, `GeoNameID`, `CollectorID`, `InformantID`, or `PersonID`.
 
-**\*\*Note:** Requests to the `/api/v0.5/cbeg` endpoint must be filtered by at least one of the following parameters: `LogainmID`, `GeoNameID`, `Country`, `PhotographerID`, or `PersonID`.
+**\*\*Note:** Requests to the `/api/v0.5/cbeg` endpoint must be filtered by at least one of the following parameters: `CountyID`, `PlaceID`, , `Country`, `GeoNameID`, `PhotographerID`, `RelevantPersonID`, or `PersonID`.
+
+**\*\*\*Note:** Requests to the `/api/v0.5/cbes` endpoint must be filtered by at least one of the following parameters: `VolumeID`, `VolumeNumber`, `PageID`, `PartID`, `ItemID`, `SchoolCountID`, `SchoolPlaceID`, `TeacherID`, `CountyID`, `PlaceID`, `Country`, `GeoNameID`, `CollectorID`, `InformantID`, or `PersonID`.
 
 ### URL path parameters
 
