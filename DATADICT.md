@@ -551,8 +551,8 @@ A transcript of material on a manuscript page contributed by members of the [Mei
 | DateCreated     | ISO 8601 datetime   | one                 | The date and time of transcript creation.  |
 | DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to transcript.  |
 | ItemID          | integer             | one                 | Identifies the manuscript `item` that is transribed. |
-| Approved        | boolean             | one                 | Denotes whether the transcript has been approved. Transcripts contributed by junior members of Meitheal Dúchas.ie are unapproved until they are reviewed by a member of the Dúchas editorial team. **(Privileged)** |
-| Moderated       | boolean             | one                 | Denotes whether the transcript has been moderated by a member of the Dúchas editorial team. In such cases the transcript is not made publicly available. **(Privileged)** |
+| Approved        | boolean             | one                 | Denotes whether the transcription has been approved for publication. Transcripts contributed by junior members of Meitheal Dúchas.ie are unapproved until they are reviewed by a member of the Dúchas editorial team. **(Privileged)** |
+| Moderated       | boolean             | one                 | Denotes whether the transcript has been reviewed by a member of the Dúchas editorial team. **(Privileged)** |
 | Text            | string              | one                 | The transcript text. |
 | Transcribers    | [`transcriber`](#transcriber) | none or one or many | Metadata regarding the volunteers who contributed to the transcript. This value is empty if the transcription was carried out by anonymous contributors. |
 
