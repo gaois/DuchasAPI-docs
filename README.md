@@ -150,9 +150,10 @@ Use these query parameters to filter the results returned by the API.
 | `InformantID` | integer       | Filter by informant's CBÉD identifier. |
 | `RelevantPersonID` | integer       | Filter by person's CBÉD identifer. |
 | `PersonID` | integer       | Filter by person's CBÉD identifer. This filter encompasses all person types (i.e. collector, informant, relevant person). |
-| `Country`     | ISO 3166 country code* | Filter by country ISO code (e.g. DE, US, GB-ENG). |
-| `LogainmID`   | integer       | Filter by [logainm.ie](https://www.logainm.ie) placename identifer.  |
-| `GeoNameID`   | integer       | Filter by [GeoName](https://www.geonames.org) placename identifer.  |
+| `CountyID`    | integer       | Filter by county using [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `PlaceID`     | integer       | Filter by place using [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `Country`     | ISO 3166 country code* | Filter by country using ISO code (e.g. DE, US, GB-ENG). |
+| `GeoNameID`   | integer       | Filter by place using [GeoName](https://www.geonames.org) placename identifer.  |
 | `DateFrom`    | integer**     | Retrieve records associated with this year or later. |
 | `DateTo`      | integer**     | Retrieve records associated with this year or earlier. |
 | `DateAccuracy` | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION). |
@@ -209,8 +210,8 @@ Use these query parameters to filter the results returned by the API.
 | `RelevantPersonID` | integer       | Filter by person's CBÉD identifer. |
 | `CountyID`    | integer       | Filter by county using [logainm.ie](https://www.logainm.ie) placename identifer.  |
 | `PlaceID`     | integer       | Filter by place using [logainm.ie](https://www.logainm.ie) placename identifer.  |
-| `Country`     | ISO 3166 country code* | Filter by country ISO code (e.g. DE, US, GB-ENG). |
-| `GeoNameID`   | integer       | Filter by [GeoName](https://www.geonames.org) placename identifer.  |
+| `Country`     | ISO 3166 country code* | Filter by country using ISO code (e.g. DE, US, GB-ENG). |
+| `GeoNameID`   | integer       | Filter by place using [GeoName](https://www.geonames.org) placename identifer.  |
 | `DateFrom`    | integer**     | Retrieve records associated with this year or later. |
 | `DateTo`      | integer**     | Retrieve records associated with this year or earlier. |
 | `DateAccuracy` | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION). |
