@@ -159,6 +159,7 @@ Use these query parameters to filter the results returned by the API.
 | `DateFrom`    | integer**     | Retrieve records associated with this year or later. |
 | `DateTo`      | integer**     | Retrieve records associated with this year or earlier. |
 | `DateAccuracy` | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION). |
+| `Language`    | string        | Filter items by language using ISO 639-1 language code |
 | `PartCreatedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part created before a given date in `YYYY-MM-DD` format. |
 | `PartCreatedSince` | ISO 8601 datetime | Retrieve records containing a manuscript part created after a given date in `YYYY-MM-DD` format. |
 | `PartModifiedBefore` | ISO 8601 datetime | Retrieve records containing a manuscript part last updated before a given date in `YYYY-MM-DD` format. |
