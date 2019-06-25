@@ -261,7 +261,7 @@ Below is a non-exhaustive list of valid API request URLs, provided for demonstra
 - `https://test.duchas.ie/api/v0.5/cbed/?ModifiedSince=2019-01-01`
 - `https://test.duchas.ie/api/v0.5/cbed/?PlaceID=35176`
 - `https://test.duchas.ie/api/v0.5/cbed/?Gender=f&CountyID=100013`
-- `https://test.duchas.ie/api/v0.5/cbed/?Country=US`
+- `https://test.duchas.ie/api/v0.5/cbed/?Country=AU`
 - `https://test.duchas.ie/api/v0.5/cbed/?GeoNameID=5128581`
 - `https://test.duchas.ie/api/v0.5/cbed/?PlaceID=130443&Occupation=IASC`
 - `https://test.duchas.ie/api/v0.5/cbeg/974`
