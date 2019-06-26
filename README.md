@@ -274,6 +274,8 @@ Below is a non-exhaustive list of valid API request URLs, provided for demonstra
 - `https://test.duchas.ie/api/v0.5/cbes/?VolumeNumber=0133`
 - `https://test.duchas.ie/api/v0.5/cbes/?CountyID=100002&TopicID=5192275&Language=en`
 - `https://test.duchas.ie/api/v0.5/cbes/?PlaceID=18689`
+- `https://test.duchas.ie/api/v0.5/cbes/topics`
+- `https://test.duchas.ie/api/v0.5/counties`
 
 ## HTTP status codes
 
