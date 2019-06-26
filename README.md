@@ -256,6 +256,8 @@ Use these query parameters to filter the results returned by the API.
 
 Below is a non-exhaustive list of valid API request URLs, provided for demonstration purposes:
 
+- `https://test.duchas.ie/api/v0.5/cbe/?VolumeID=7000256`
+- `https://test.duchas.ie/api/v0.5/cbe/?PersonID=315678581`
 - `https://test.duchas.ie/api/v0.5/cbed/315678333`
 - `https://test.duchas.ie/api/v0.5/cbed/1740563`
 - `https://test.duchas.ie/api/v0.5/cbed/?ModifiedSince=2019-01-01`
