@@ -236,7 +236,7 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 
 ### Schools' Collection `person`
 
-Due to the scope of the Schools' Collection digitisation project it has not yet been feasible to extract a normalised set of personal metadata. Instead, the initial phases of the project sought to capture information about the persons referred to within the collection 'as is'. Thus, potentially, the same individual may be referenced by more than one `person` entity. 
+Due to the scope of the Schools' Collection digitisation project it has not yet been feasible to extract a normalised set of personal metadata. Instead, the initial phases of the project sought to capture information about the persons referred to within the collection 'as is'. Thus, potentially, the same individual may be referred by more than one `person` entity. 
 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
