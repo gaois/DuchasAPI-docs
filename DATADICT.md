@@ -57,7 +57,7 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | ID              | integer             | one                 | The volume identifier (unique within collection). |
 | DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation.  |
-| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry. This reflects the latest updates to the manuscript parts and items, as well as updates to the volume metadata itself.  |
 | VolumeNumber    | string              | none or one         | The volume's NFC archival reference number. |
 | Status          | integer             | one                 | Specifies the entry's editorial [status](#status). **(Privileged)**  |
 | Pages           | [`page`](#main-manuscript-page)     | one                 | Metadata describing the volume's physical pages. |
@@ -172,7 +172,7 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | ID              | integer             | one                 | The volume identifier (unique within collection). |
 | DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation.  |
-| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry. This reflects the latest updates to the manuscript parts, manuscript items, and newly-created or updated page transcripts as well as updates to the volume metadata itself. |
 | VolumeNumber    | string              | none or one         | The volume's NFC archival reference number. |
 | Status          | integer             | one                 | Specifies the entry's editorial [status](#status). **(Privileged)**  |
 | Type            | string              | one                 | Distinguishes the particular type of School's Collection volume [type](#type). |
@@ -183,9 +183,9 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 
 | Value           | Description               |
 | :-------------- | :------------------------ |
-| bound-volume    | The volume is composed of originally separate parts that were bound together (?). |
-| copybook-package | The volume is composed of the original copybooks the children used to write down the material. |
-| volume          | Typical volume.            |
+| bound-volume    | The volume is composed of originally separate parts that were bound together. |
+| copybook-package | The volume is composed of the original copybooks the children used to transcribe the folkloric material. |
+| volume          | The volume is typical of those created as part of the *Scéim na Scol* folklore collection scheme. |
 
 ### Schools' Collection `page`
 
