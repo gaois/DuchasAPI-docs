@@ -273,6 +273,7 @@ Below is a non-exhaustive list of valid API request URLs, provided for demonstra
 - `https://test.duchas.ie/api/v0.5/cbeg/?HandbookTopic=B006&CountyID=100023`
 - `https://test.duchas.ie/api/v0.5/cbeg/?CountyID=100024&DateFrom=1960&DateTo=1969&DateAccuracy=APPROX`
 - `https://test.duchas.ie/api/v0.5/cbes/?VolumeNumber=0133`
+- `https://test.duchas.ie/api/v0.5/cbes/?CountyID=100002&TopicID=5192275&Language=en`
 
 ## HTTP status codes
 
