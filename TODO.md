@@ -12,3 +12,4 @@
 ## Desirable
 
 - Fulltext search across collections, e.g. `/api/v1.0/cbes/?Query=St.+John's+Eve`
+- Query parameter for retrieving items or pages that have/have not been transcribed.
