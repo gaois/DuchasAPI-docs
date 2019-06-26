@@ -191,8 +191,7 @@ Use these query parameters to filter the results returned by the API.
 | `CountyID`    | integer       | Filter items by county using [logainm.ie](https://www.logainm.ie) placename identifer.  |
 | `PlaceID`     | integer       | Filter items by place using [logainm.ie](https://www.logainm.ie) placename identifer.  |
 | `TopicID`     | integer       | Filter items by topic using CBÉS topic identifier. |
-| `Language`    | string        | Filter items by language using ISO 639-1 language code |
-| `DateAccuracy` | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION). |
+| `Language`    | string        | Filter items by language using ISO 639-1 language code. |
 | `CreatedBefore` | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format. |
 | `CreatedSince` | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format. |
 | `ModifiedBefore` | ISO 8601 datetime | Retrieve records last updated before a given date in `YYYY-MM-DD` format. This includes new or updated page transcripts. |
@@ -282,7 +281,7 @@ The status of all requests will be communicated, in the first instance, via stan
 
 | Code  | Definition            | Further information |
 | :---- | :-------------------- | :------------------ |
-| 200   | OK                    | A JSON object will be returned.  |
+| 200   | OK                    | One or more JSON objects will be returned.  |
 | 400   | BAD REQUEST           | The request syntax was invalid—a JSON object describing the error may be returned. |
 | 401   | UNAUTHORISED          | A valid API key was not provided. |
 | 404   | NOT FOUND             | The resource does not exist. |
