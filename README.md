@@ -184,6 +184,7 @@ Use these query parameters to filter the results returned by the API.
 | `ItemID`      | integer       | Filter by manuscript item identifer. |
 | `SchoolCountyID`    | integer       | Filter schools (i.e. manucript parts) by county using [logainm.ie](https://www.logainm.ie) placename identifer.  |
 | `SchoolPlaceID`     | integer       | Filter schools (i.e. manucript parts) by place using [logainm.ie](https://www.logainm.ie) placename identifer.  |
+| `TeacherID`   | integer       | Filter schools (i.e. manucript parts) by teacher's CBÉS identifier. |
 | `CollectorID` | integer       | Filter items by collector's CBÉS identifier. |
 | `InformantID` | integer       | Filter items by informant's CBÉS identifier. |
 | `PersonID`    | integer       | Filter items by person's CBÉS identifer. This filter encompasses both collectors and informants. |
