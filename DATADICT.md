@@ -124,7 +124,7 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | Informants      | [`person`](#person) | none or one or many | Denotes a person or persons from whom the manuscript item was obtained. |
 | RelevantPersons | [`person`](#person) | none or one or many | Denotes a person or persons referenced within, or otherwise associated with, the manuscript item.  |
 | LinkedItems     | [`ManuscriptItemLink`](#manuscriptItemLink) | none or one or many | Denotes one or more manuscript items which are directly related to this item. Typically the items are linked by a sequential relationship (e.g. the other items precede or follow the current item in a series of continuing or related stories). | 
-| ExtraInfoStatus | string              | none or one         | Specifies the publication [status](#extraInfoStatus) of the `ExtraInfoEN` and `ExtraInfoGA` fields. |
+| ExtraInfoStatus | string              | none or one         | Specifies the publication [status](#extraInfoStatus) of the `ExtraInfoEN` and `ExtraInfoGA` fields. **(Privileged)** |
 | ExtraInfoEN     | string              | none or one         | Free-text remarks on the manuscript item (in English). Authored as part of the Dúchas project. |
 | ExtraInfoGA     | string              | none or one         | Free-text remarks on the manuscript item (in Irish). Authored as part of the Dúchas project. |
 
@@ -321,13 +321,13 @@ Queries to the Photographic Collection may return one or more `photograph` objec
 | LocationsIreland | [`locationIreland`](#locationIreland)  | none or one or many | Denotes a location or locations in Ireland associated with the photograph. |
 | Countries       | [`country`](#country) | none or one or many | Denotes a country or countries, apart from Ireland, associated with the photograph. |
 | LocationsAbroad | [`locationAbroad`](#locationAbroad) | none or one or many | Denotes a location or locations outside of Ireland associated with the photograph. |
-| ArchivedDescriptionStatus | string        | none or one         | Specifies the publication [status](#archivedDescriptionStatus) of the `ArchivedDescription` field.  |
+| ArchivedDescriptionStatus | string        | none or one         | Specifies the publication [status](#archivedDescriptionStatus) of the `ArchivedDescription` field. **(Privileged)**  |
 | ArchivedDescription | string             | none or one         | A free-text archival description of the photograph. Imported from NFC's previous data management system at the outset of the digitization process. |
-| ExtraInfoStatus | string              | none or one         | Specifies the publication [status](#extraInfoStatus) of the `ExtraInfoEN` and `ExtraInfoGA` fields |
+| ExtraInfoStatus | string              | none or one         | Specifies the publication [status](#extraInfoStatus) of the `ExtraInfoEN` and `ExtraInfoGA` fields. **(Privileged)** |
 | ExtraInfoEN     | string              | none or one         | A free-text commentary on the photograph (in English). Authored as part of the Dúchas project. |
 | ExtraInfoGA     | string              | none or one         | A free-text commentary on the photograph (in Irish). Authored as part of the Dúchas project. |
 | Formats         | [`format`](#format)             | none or one or many  | Describes the physical image formats held by the NFC that are associated with the entry. |
-| ArchivedInfo    | [`archivedInfo`](#archivedInfo)      | none or one         | Comprises the archival information imported from NFC's previous data management system at the outset of the digitization process. |
+| ArchivedInfo    | [`archivedInfo`](#archivedInfo)      | none or one         | Comprises the archival information imported from NFC's previous data management system at the outset of the digitization process. **(Privileged)** |
 | Digitization    | [`digitization`](#digitization)      | none or one         | Metadata associated with the digitization of the archive image or images associated with this entry. |
 
 #### `copyright`
