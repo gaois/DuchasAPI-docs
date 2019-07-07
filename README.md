@@ -160,10 +160,9 @@ Use these query parameters to filter the results returned by the API.
 | `PlaceID`     | integer       | Filter by place using [logainm.ie](https://www.logainm.ie) placename identifer.  |
 | `Country`     | ISO 3166 country code* | Filter by country using ISO code (e.g. DE, US, GB-ENG). |
 | `GeoNameID`   | integer       | Filter by place using [GeoName](https://www.geonames.org) placename identifer.  |
+| `Language`    | string        | Filter items by language using ISO 639-1 language code |
 | `DateFrom`    | integer**     | Retrieve records associated with this year or later. |
 | `DateTo`      | integer**     | Retrieve records associated with this year or earlier. |
-| `DateAccuracy` | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION). |
-| `Language`    | string        | Filter items by language using ISO 639-1 language code |
 | `DateAccuracy` | string       | Filter by accuracy of date record (APPROX, INFER, QUESTION). |
 | `CreatedBefore` | ISO 8601 datetime | Retrieve records created before a given date in `YYYY-MM-DD` format. |
 | `CreatedSince` | ISO 8601 datetime | Retrieve records created after a given date in `YYYY-MM-DD` format. |
