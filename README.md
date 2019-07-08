@@ -36,7 +36,7 @@ The National Folklore Collection’s photographic collection consists of some 80
 
 #### The Persons Database (CBÉD)
 
-Persons named within the CBÉ and CBÉG metadata are identified by reference to objects in this database. CBÉD does not map directly to any physical collection held by the NFC. Rather, given that many persons appear in several NFC collections—some photographers in CBÉG are also collectors in CBÉ, for example—the Persons Database is designed to serve as a single source of truth for personal metadata across the entire data set. At present, the Persons Database comprises all persons in the digitised portions of CBÉ and CBÉG. Due to the scope of the Schools' Collection digitisation project it has not yet been feasible to extract a normalised set of personal metadata; it is planned to revisit this work in the future, however.
+Persons named within the CBÉ and CBÉG metadata are identified by reference to objects in this database. CBÉD does not map directly to any physical collection held by the NFC. Rather, given that many persons appear in several NFC collections—some photographers in CBÉG are also collectors in CBÉ, for example—the Persons Database is designed to serve as a single source of truth for personal metadata across the entire data set. At present, the Persons Database comprises all persons in the digitised portions of CBÉ and CBÉG. Due to the scope of the Schools' Collection digitisation project it has not yet been feasible to extract a normalised set of personal metadata; it is hoped to revisit this work in the future, however.
 
 Further information regarding the NFC and its collections is available [here](https://www.duchas.ie/en/info/cbe).
 
