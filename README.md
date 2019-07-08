@@ -28,7 +28,7 @@ The Main Manuscript Collection comprises 2,400 bound volumes of material collect
 
 #### The Schools' Collection (CBÉS)
 
-Approximately 740,000 pages (288,000 pages in the pupils’ original exercise books; 451,000 pages in bound volumes) of folklore and local tradition were compiled by pupils from 5,000 primary schools in the Irish Free State between 1937 and 1939. The scheme resulted in the creation of over half a million manuscript pages, generally referred to as ‘Bailiúchán na Scol’ or ‘The Schools’ Collection’. There are 1,128 volumes, numbered and bound, in the Collection, all of which have been digitised.
+Approximately 740,000 pages (288,000 pages in the pupils’ original exercise books; 451,000 pages in bound volumes) of folklore and local tradition were compiled by pupils from 5,000 primary schools in the Irish Free State between 1937 and 1939. This scheme, known as *Scéim na Scol*, resulted in the creation of over half a million manuscript pages, generally referred to as ‘Bailiúchán na Scol’ or ‘The Schools’ Collection’. There are 1,128 volumes, numbered and bound, in the Collection, all of which have been digitised.
 
 #### The Photographic Collection (CBÉG)
 
