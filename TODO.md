@@ -3,7 +3,6 @@
 ## Essential
 
 - A number of the filter parameters in the Main Manuscript Collection API, e.g. `CollectorID`, `InformantID`, `PlaceID`, etc., do not retrieve the complete result sets that they should. This is not due to any technical issue with the API, rather it is the result of changes that are currently underway to the data structure of this collection. The editors have requested that certain data be associated with manuscript items rather than manuscript parts. This issue is currently being addressed.
-- In the case of the Main Manuscript and Schools' Collections certain querys filtered using the `CreatedBefore`, `CreatedSince`, `ModifiedBefore` or `ModifiedSince` parameters time out (a 500 HTTP status code is returned). This is because, at present, filtering on these parameters requires a series of calculations for creation/modification dates across all of the constituent manuscript parts and items that might potentially be included in the result set and this is not producing an optimal query plan. This issue can be resolved using a different approach.
 - Transcripts in the Schools' Collection API are currently served from a copy of the production database. These services need to be integrated so that transcripts are retrieved from the 'live' data.
 
 ## Planned
