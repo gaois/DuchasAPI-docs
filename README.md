@@ -86,7 +86,7 @@ Pass the API key into an `apiKey` GET query string parameter:
 
 > `'https://test.duchas.ie/api/v0.5/cbed/1740563?apiKey=API_KEY_HERE'`
 
-Note: The GET query parameter may be used for non-GET requests (such as POST and PUT).
+**Note:** The GET query parameter may be used for non-GET requests (such as POST and PUT).
 
 #### HTTP Basic Authentication username
 
