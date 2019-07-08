@@ -68,6 +68,8 @@ Queries to the Main Manuscript Collection may return one or more `volume` object
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | ID              | integer             | one                 | The page identifier (unique within collection). |
+| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation.  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | PageNumber      | string              | one                 | The page number.     |
 | ListingOrder    | string              | one                 | The listing order of the page within the volume. This is generally, but not always, identical to the page number as written on the page itself. |
 | TitlePage       | boolean             | none or one         | Indicates that this is a title page associated with a manuscript part. |
@@ -192,6 +194,8 @@ Queries to the Schools' Collection may return one or more `volume` objects. The 
 | Property name   | Type                | Cardinality         | Description               |
 | :-------------- | :------------------ | :------------------ | :------------------------ |
 | ID              | integer             | one                 | The page identifier (unique within collection). |
+| DateCreated     | ISO 8601 datetime   | none or one         | The date and time of entry creation.  |
+| DateModified    | ISO 8601 datetime   | none or one         | The date and time of most recent modification to entry.  |
 | PageNumber      | string              | one                 | The page number.     |
 | ListingOrder    | string              | one                 | The listing order of the page within the volume. This is generally, but not always, identical to the page number as written on the page itself. |
 | TitlePage       | boolean             | none or one         | Indicates that this is a title page associated with a manuscript part. |
