@@ -32,7 +32,7 @@ Approximately 740,000 pages (288,000 pages in the pupils’ original exercise bo
 
 #### The Photographic Collection (CBÉG)
 
-The National Folklore Collection’s photographic collection consists of some 80,000 photographs, the majority of which were taken by members of the Irish Folklore Commission (1935-70) and its successors, including staff of the NFC. The process of digitising and conserving the collection continues apace; some 10,000 images have been made avalaible online for the first time.
+The National Folklore Collection’s photographic collection consists of some 80,000 photographs, the majority of which were taken by members of the Irish Folklore Commission (1935-70) and its successors, including staff of the NFC. The process of digitising and conserving the collection continues apace; some 10,000 images have been made available online for the first time.
 
 #### The Persons Database (CBÉD)
 
