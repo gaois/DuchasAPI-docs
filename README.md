@@ -128,7 +128,7 @@ The resources provided by the API are accessed via unique paths appended to the 
 
 **\*** Requests to the `/api/v0.5/cbe` endpoint must be filtered by at least one of the following parameters: `VolumeID`, `VolumeNumber`, `PageID`, `PartID`, `ItemID`,`CountyID`, `PlaceID`, `Country`, `GeoNameID`, `CollectorID`, `InformantID`, or `PersonID`.
 
-**\*\** Requests to the `/api/v0.5/cbeg` endpoint must be filtered by at least one of the following parameters: `CountyID`, `PlaceID`, , `Country`, `GeoNameID`, `PhotographerID`, `RelevantPersonID`, or `PersonID`.
+**\*\*** Requests to the `/api/v0.5/cbeg` endpoint must be filtered by at least one of the following parameters: `CountyID`, `PlaceID`, , `Country`, `GeoNameID`, `PhotographerID`, `RelevantPersonID`, or `PersonID`.
 
 **\*\*\*** Requests to the `/api/v0.5/cbes` endpoint must be filtered by at least one of the following parameters: `VolumeID`, `VolumeNumber`, `PageID`, `PartID`, `ItemID`, `SchoolCountyID`, `SchoolPlaceID`, `TeacherID`, `CountyID`, `PlaceID`, `Country`, `GeoNameID`, `CollectorID`, `InformantID`, or `PersonID`.
 
