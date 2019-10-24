@@ -1,6 +1,6 @@
 # Dúchas Application Programming Interface (Version 0.5): Data dictionary
 
-**Note:** This documentation describes a prerelease version of the Dúchas API. Features are being added on an ongoing basis. URLs in this document refer to the test.duchas.ie test domain. These links and other aspects of the documentation will be revised in advance of the v1.0 release.
+**Note:** This documentation describes a prerelease version of the Dúchas API. Features are being added on an ongoing basis. This documentation will be revised in advance of the v1.0 release.
 
 This document describes the data structure of the collections made available via the Dúchas Application Programming Interface (API). Dúchas is a project is to initiate the digitization of the [National Folklore Collection](https://www.ucd.ie/irishfolklore/en) (NFC). For general information regarding the API and for developer guidelines please consult the [developer documentation](https://github.com/gaois/DuchasAPI-docs/blob/master/README.md).
 
