@@ -1,6 +1,6 @@
 # Dúchas Application Programming Interface (Version 0.5): Developer documentation
 
-**Note:** This documentation describes a **prerelease** version of the Dúchas API. Features are being added on an ongoing basis. URLs in this document refer to the `test.duchas.ie` test domain. These links and other aspects of the documentation will be revised in advance of the v1.0 release. 
+**Note:** This documentation describes a **prerelease** version of the Dúchas API. Features are being added on an ongoing basis. This documentation will be revised in advance of the v1.0 release. 
 
 ## Contents
 
@@ -44,7 +44,7 @@ Further information regarding the NFC and its collections is available [here](ht
 
 The Dúchas API provides access to a number of resources by means of a defined URL schema. Specific resources are accessed via unique paths appended to the main website host. In some cases the resources that are returned may be filtered using optional query parameters. Attempts to access a resource provided by the API are referred to as requests. Following a successful request, resources are returned in the form of JSON. An unsuccessful attempt to access a resource will receive, at a minimum, a relevant HTTP status code in response to the request. An example of a valid request to the API is as follows:
 
-> `https://test.duchas.ie/api/v0.5/cbed/315678333`
+> `https://www.duchas.ie/api/v0.5/cbed/315678333`
 
 Users or applications (clients) requesting a resource via the API must authenticate their identity. This is achieved by providing an API key with each request. Each client must obtain a unique API key prior to interacting with the interface. Authentication is required to prevent abuse of the service and to track general usage statistics. Further details are provided below.
 
@@ -78,13 +78,13 @@ Your API key may be passed to the service in a few different ways. Choose whiche
 
 Pass the API key into an `X-Api-Key` header:
 
-> `'X-Api-Key: <API_KEY_HERE>' 'https://test.duchas.ie/api/v0.5/cbed/1740563'`
+> `'X-Api-Key: <API_KEY_HERE>' 'https://www.duchas.ie/api/v0.5/cbed/1740563'`
 
 #### GET query parameter
 
 Pass the API key into an `apiKey` GET query string parameter:
 
-> `'https://test.duchas.ie/api/v0.5/cbed/1740563?apiKey=API_KEY_HERE'`
+> `'https://www.duchas.ie/api/v0.5/cbed/1740563?apiKey=API_KEY_HERE'`
 
 **Note:** The GET query parameter may be used for non-GET requests (such as POST and PUT).
 
@@ -92,7 +92,7 @@ Pass the API key into an `apiKey` GET query string parameter:
 
 As an alternative, pass the API key as the username (with an empty password) using HTTP basic authentication:
 
-> `'https://API_KEY_HERE@test.duchas.ie/api/v0.5/cbed/1740563'`
+> `'https://API_KEY_HERE@www.duchas.ie/api/v0.5/cbed/1740563'`
 
 ## API access privileges
 
@@ -257,28 +257,28 @@ Use these query parameters to filter the results returned by the API.
 
 Below is a non-exhaustive list of valid API request URLs, provided for demonstration purposes:
 
-- `https://test.duchas.ie/api/v0.5/cbe/?VolumeID=7000256`
-- `https://test.duchas.ie/api/v0.5/cbe/?PersonID=315678581`
-- `https://test.duchas.ie/api/v0.5/cbed/315678333`
-- `https://test.duchas.ie/api/v0.5/cbed/1740563`
-- `https://test.duchas.ie/api/v0.5/cbed/?ModifiedSince=2019-01-01`
-- `https://test.duchas.ie/api/v0.5/cbed/?PlaceID=35176`
-- `https://test.duchas.ie/api/v0.5/cbed/?Gender=f&CountyID=100013`
-- `https://test.duchas.ie/api/v0.5/cbed/?Country=AU`
-- `https://test.duchas.ie/api/v0.5/cbed/?GeoNameID=2177413`
-- `https://test.duchas.ie/api/v0.5/cbed/?PlaceID=130443&Occupation=IASC`
-- `https://test.duchas.ie/api/v0.5/cbeg/974`
-- `https://test.duchas.ie/api/v0.5/cbeg/?CountyID=100009&ModifiedSince=2018-09-01`
-- `https://test.duchas.ie/api/v0.5/cbeg/?Status=4&CountyID=100023`
-- `https://test.duchas.ie/api/v0.5/cbeg/?Copyright=UNK&PhotographerID=93573082`
-- `https://test.duchas.ie/api/v0.5/cbeg/?HandbookTopic=E&PhotographerID=93573082&Digitized=false`
-- `https://test.duchas.ie/api/v0.5/cbeg/?HandbookTopic=B006&CountyID=100023`
-- `https://test.duchas.ie/api/v0.5/cbeg/?CountyID=100024&DateFrom=1960&DateTo=1969&DateAccuracy=APPROX`
-- `https://test.duchas.ie/api/v0.5/cbes/?VolumeNumber=0133`
-- `https://test.duchas.ie/api/v0.5/cbes/?CountyID=100002&TopicID=5192275&Language=en`
-- `https://test.duchas.ie/api/v0.5/cbes/?PlaceID=18689`
-- `https://test.duchas.ie/api/v0.5/cbes/topics`
-- `https://test.duchas.ie/api/v0.5/counties`
+- `https://www.duchas.ie/api/v0.5/cbe/?VolumeID=7000256`
+- `https://www.duchas.ie/api/v0.5/cbe/?PersonID=315678581`
+- `https://www.duchas.ie/api/v0.5/cbed/315678333`
+- `https://www.duchas.ie/api/v0.5/cbed/1740563`
+- `https://www.duchas.ie/api/v0.5/cbed/?ModifiedSince=2019-01-01`
+- `https://www.duchas.ie/api/v0.5/cbed/?PlaceID=35176`
+- `https://www.duchas.ie/api/v0.5/cbed/?Gender=f&CountyID=100013`
+- `https://www.duchas.ie/api/v0.5/cbed/?Country=AU`
+- `https://www.duchas.ie/api/v0.5/cbed/?GeoNameID=2177413`
+- `https://www.duchas.ie/api/v0.5/cbed/?PlaceID=130443&Occupation=IASC`
+- `https://www.duchas.ie/api/v0.5/cbeg/974`
+- `https://www.duchas.ie/api/v0.5/cbeg/?CountyID=100009&ModifiedSince=2018-09-01`
+- `https://www.duchas.ie/api/v0.5/cbeg/?Status=4&CountyID=100023`
+- `https://www.duchas.ie/api/v0.5/cbeg/?Copyright=UNK&PhotographerID=93573082`
+- `https://www.duchas.ie/api/v0.5/cbeg/?HandbookTopic=E&PhotographerID=93573082&Digitized=false`
+- `https://www.duchas.ie/api/v0.5/cbeg/?HandbookTopic=B006&CountyID=100023`
+- `https://www.duchas.ie/api/v0.5/cbeg/?CountyID=100024&DateFrom=1960&DateTo=1969&DateAccuracy=APPROX`
+- `https://www.duchas.ie/api/v0.5/cbes/?VolumeNumber=0133`
+- `https://www.duchas.ie/api/v0.5/cbes/?CountyID=100002&TopicID=5192275&Language=en`
+- `https://www.duchas.ie/api/v0.5/cbes/?PlaceID=18689`
+- `https://www.duchas.ie/api/v0.5/cbes/topics`
+- `https://www.duchas.ie/api/v0.5/counties`
 
 ## HTTP status codes
 
